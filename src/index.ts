@@ -1,6 +1,7 @@
 import 'module-alias/register';
 import "reflect-metadata";
 import resources from "resources/index"
+import { BankCountryCode, BankResolveParam, Coin, Environment, Pagination, Ticker } from 'types';
 /**
  * 
  * @param params 
@@ -14,12 +15,12 @@ import resources from "resources/index"
  */
 const STAGING_URL: string = "https://enterprise-api-staging.bitmama.io/v1";
 const PRODUCTION_URL: string = "https://enterprise-api.bitmama.io/v1";
-const obj:Record<string, any> = {
+const obj = {
   resources: resources,
   TOKEN: '',
   ENV: '',
   BASE_URL:'',
-  init: (TOKEN: string, ENV: string): any => {
+  init: (TOKEN: string, ENV: Environment): any => {
     try {
       const envList: string[] = ['prod', 'production', 'dev', 'development'];
       const isInEnvList = envList.includes(String(ENV).trim());
@@ -39,32 +40,33 @@ const obj:Record<string, any> = {
     // obj.init();
     return resources.wallet.create(obj.BASE_URL, obj.TOKEN);
   },
-  listWallet: (coin:string,pagination:Record<string, number>) => {
-    return resources.wallet.list(obj.BASE_URL, obj.TOKEN, coin, pagination);
-  },
-  getRate: (ticker: string) => {
-    return resources.rate.rates(obj.BASE_URL, obj.TOKEN,ticker);
+  listWallet: (coin:Coin,pagination:Pagination) => {
+    return resources.wallet.get(obj.BASE_URL, obj.TOKEN, coin, pagination);
   },
   enterpriseWallet: () => {
     return resources.wallet.wallets(obj.BASE_URL, obj.TOKEN);
-  }
-  getTickers: () => {
-    return resources.rate.tickers(obj.BASE_URL, obj.TOKEN);
   },
-  createWebhook: () => {
-    
+  getRate: (ticker: Ticker) => {
+    return resources.rate.rates(obj.BASE_URL, obj.TOKEN,ticker);
+  },
+  getTickers: () => {
+    return resources.rate.tickers();
+  },
+  createWebhook: (endpoint:string) => {
+    return resources.webhook.create(obj.BASE_URL, obj.TOKEN, endpoint);
   },
   getWebhook: () => {
-    
+    return resources.webhook.get(obj.BASE_URL, obj.TOKEN);
   },
-  listBank: () => {
-    
+  listBank: (countryCode:BankCountryCode) => {
+    return resources.bank.list(obj.BASE_URL, obj.TOKEN,countryCode);
   },
-  resolveBankAccount: () => {
-    
+  resolveBankAccount: (param:BankResolveParam) => {
+    return resources.bank.resolve(obj.BASE_URL, obj.TOKEN, param);
   },
-  
+
 }
+
 
 
 const initialization = obj.init
