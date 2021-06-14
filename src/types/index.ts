@@ -11,3 +11,7 @@ export type BankResolveParam = {
   accountNumber?: string,
   bankCode?:string,
 }
+export type CreateWalletParam = {
+  coin: Coin,
+  label: string,
+}

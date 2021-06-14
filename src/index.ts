@@ -1,7 +1,7 @@
 import 'module-alias/register';
 import "reflect-metadata";
 import resources from "resources/index"
-import { BankCountryCode, BankResolveParam, Coin, Environment, Pagination, Ticker } from 'types';
+import { BankCountryCode, BankResolveParam, Coin, CreateWalletParam, Environment, Pagination, Ticker } from 'types';
 /**
  * 
  * @param params 
@@ -36,9 +36,9 @@ const obj = {
       throw e.message;
     }
   },
-  createWallet: () => {
-    // obj.init();
-    return resources.wallet.create(obj.BASE_URL, obj.TOKEN);
+  createWallet: async(param:CreateWalletParam) => {
+    const res = await resources.wallet.create(obj.BASE_URL, obj.TOKEN, param);
+    return res;
   },
   listWallet: (coin:Coin,pagination:Pagination) => {
     return resources.wallet.get(obj.BASE_URL, obj.TOKEN, coin, pagination);

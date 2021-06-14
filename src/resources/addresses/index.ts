@@ -1,10 +1,10 @@
-import { Coin, Pagination } from "types"
+import { Coin, CreateWalletParam, Pagination } from "types"
+import axiosLib from "utils/axios"
 
 // const root = "/address"
 const wallet = {
-  create: (url: string, token: string) => {
-    console.log(url)
-    console.log(token)
+  create: async(url: string, token: string, param:CreateWalletParam) => {
+    return await axiosLib.createWalletAddress(url, token, param);
   },
   get: (url: string, token: string,coin:Coin, pagination:Pagination) => {
     console.log(url)
@@ -12,9 +12,8 @@ const wallet = {
     console.log(coin)
     console.log(pagination)
   },
-  wallets: (url: string, token: string) => {
-    console.log(url)
-    console.log(token)
+  wallets: async (url: string, token: string) => {
+    return await axiosLib.listWallets(url, token);
   }
 }
 export default wallet
