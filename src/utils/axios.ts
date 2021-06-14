@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Coin, Pagination } from "types";
 const axiosLib = {
   client: async (url: string, token: string) => {
     const client = axios.create({
@@ -28,17 +29,25 @@ const axiosLib = {
       throw new Error(String(e));
     }
   },
-  // getWalletAddress: async () => {
-  //   try {
-  //     const client = await changeraClient.client();
-  //     const res = await client.post(`api/v1/user/bill/airtime/vend`, body);
-  //     if (res?.data?.data) return res.data.data;
-  //   } catch (e) {
-  //     console.log(e?.response?.data)
-  //     if (e?.response?.data) return Promise.reject(String(e?.response?.data?.message));
-  //     return Promise.reject(String(e));
-  //   }
-  // },
+  getWalletAddress: async (url: string, token: string,coin:Coin,pagination:Pagination) => {
+    try {
+      const client = await axiosLib.client(url, token);
+      const res = await client.get(`/address?page=${pagination.page}&size=${pagination.size}&coin=${coin}`);
+      if (res?.data?.message) return res.data.message;
+      return res?.data;
+    } catch (e:any | Error | unknown) {
+      if (e?.response?.data) {
+        if (String(e?.response?.data?.message) === "TOKEN_HEADER_NOT_SET") {
+          throw new Error("Set Token Headers");    
+        }
+        if (String(e?.response?.data?.message) === "INVALID_TOKEN") {
+          throw new Error("Invalid Token Sent");    
+        }
+        throw new Error(String(e?.response?.data?.message));
+      };
+      throw new Error(String(e));
+    }
+  },
   listWallets: async (url: string, token: string) => {
     try {
       const client = await axiosLib.client(url, token);
