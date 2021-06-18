@@ -12,7 +12,7 @@ const param: CreateWalletParam = { label, coin };
 
 // setup credentials
 const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
-bitmama.createWallet(param)
+bitmama.createCryptoWallet(param)
   .then((res: any) => {
     console.log(res);
   })

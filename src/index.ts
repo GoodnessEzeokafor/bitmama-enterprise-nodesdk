@@ -36,11 +36,11 @@ const obj = {
       throw e.message;
     }
   },
-  createWallet: async(param:CreateWalletParam) => {
+  createCryptoWallet: async(param:CreateWalletParam) => {
     const res = await resources.wallet.create(obj.BASE_URL, obj.TOKEN, param);
     return res;
   },
-  listWallet: (coin:Coin,pagination:Pagination) => {
+  listCryptoWallet: async(coin:Coin,pagination:Pagination) => {
     return resources.wallet.get(obj.BASE_URL, obj.TOKEN, coin, pagination);
   },
   enterpriseWallet: () => {
