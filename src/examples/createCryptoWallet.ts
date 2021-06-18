@@ -12,8 +12,9 @@ const param: CreateWalletParam = { label, coin };
 
 // setup credentials
 const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
-bitmama.createCryptoWallet(param)
-  .then((res: any) => {
-    console.log(res);
-  })
-  .catch((e: any | Error | unknown) => console.log(e));
+const call = async() => {
+  const data = await bitmama.createCryptoWallet(param);
+  console.log(data);
+  return
+}
+call()

@@ -35,6 +35,7 @@
     
     "exclude": [
         "tests",
+        "test",
         "dist",
         "node_modules"
     ],
