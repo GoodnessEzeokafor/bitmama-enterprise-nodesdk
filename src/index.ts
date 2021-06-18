@@ -47,22 +47,23 @@ const obj = {
     return resources.wallet.wallets(obj.BASE_URL, obj.TOKEN);
   },
   getRate: (ticker: Ticker) => {
-    return resources.rate.rates(obj.BASE_URL, obj.TOKEN,ticker);
+    return resources.rates.rates(obj.BASE_URL, obj.TOKEN,ticker);
   },
   getTickers: () => {
-    return resources.rate.tickers();
+    return resources.rates.tickers();
   },
-  createWebhook: (endpoint:string) => {
-    return resources.webhook.create(obj.BASE_URL, obj.TOKEN, endpoint);
+  createWebhook: (endpoint: string) => {
+    
+    return resources.webhooks.create(obj.BASE_URL, obj.TOKEN, endpoint);
   },
   getWebhook: () => {
-    return resources.webhook.get(obj.BASE_URL, obj.TOKEN);
+    return resources.webhooks.get(obj.BASE_URL, obj.TOKEN);
   },
   listBank: (countryCode:BankCountryCode) => {
-    return resources.bank.list(obj.BASE_URL, obj.TOKEN,countryCode);
+    return resources.banks.list(obj.BASE_URL, obj.TOKEN,countryCode);
   },
   resolveBankAccount: (param:BankResolveParam) => {
-    return resources.bank.resolve(obj.BASE_URL, obj.TOKEN, param);
+    return resources.banks.resolve(obj.BASE_URL, obj.TOKEN, param);
   },
 
 }
