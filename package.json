@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest --config jest.config.ts",
     "start": "npm run build && node  dist/index.js",
-    "example": "ts-node src/examples/createCryptoWallet.ts",
+    "example": "ts-node src/examples/listCryptoWallet.ts",
     "dev": "ts-node src/index.ts"
   },
   "repository": {

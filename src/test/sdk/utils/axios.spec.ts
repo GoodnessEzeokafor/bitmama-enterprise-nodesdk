@@ -1,5 +1,5 @@
 import client from "utils/axios";
-import { mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockTestBaseUrl, mockTestToken } from "../setup";
+import { mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockListCryptoWalletResponse, mockPagination, mockTestBaseUrl, mockTestToken } from "../setup";
 jest.mock("axios")
 
 describe("mock test case for utils/axios.ts", () => {
@@ -7,10 +7,9 @@ describe("mock test case for utils/axios.ts", () => {
     jest.resetAllMocks();
   });
 
-  describe("create crypto address",() => {
-    // mockAxios.g
-    test("should return address details", async() => {
-        const spy = jest
+  describe("create crypto address", () => {
+    test("should return address details", async () => {
+      const spy = jest
         .spyOn(client, "createWalletAddress")
         .mockResolvedValueOnce(mockCreateCryptoAddressResponse);
       const res = await client.createWalletAddress(mockTestBaseUrl, mockTestToken, mockCreateCryptoWalletRequest);
@@ -19,7 +18,24 @@ describe("mock test case for utils/axios.ts", () => {
       expect(res?.address).toBe(mockCreateCryptoAddressResponse.address);
       expect(res).toMatchObject(mockCreateCryptoAddressResponse);
       expect(spy).toHaveBeenCalledTimes(1);
-    })
-})
+    });
+  });
 
+  describe("return crypto wallets", () => {
+    test("should return crypto wallets", async () => {
+      const spy = jest
+      .spyOn(client, "getWalletAddress")
+        .mockResolvedValueOnce(mockListCryptoWalletResponse);
+      const res = await client.getWalletAddress(mockTestBaseUrl, mockTestToken,mockCoin,mockPagination);
+      // expect(res?.qrCode).toBe(mockCreateCryptoAddressResponse.qrCode);
+      // expect(res?.coin).toBe(mockCreateCryptoAddressResponse.coin);
+      // expect(res?.address).toBe(mockCreateCryptoAddressResponse.address);
+      expect(res).toMatchObject(mockListCryptoWalletResponse);
+      expect(res.stats).toMatchObject(mockListCryptoWalletResponse.stats);
+      expect(res.stats.page).toBe(mockPagination.page);
+      expect(res.stats.size).toBe(mockPagination.size);
+      expect(res.data).toMatchObject(mockListCryptoWalletResponse.data);
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+  });
 });
