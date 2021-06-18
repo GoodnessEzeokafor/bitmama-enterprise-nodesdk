@@ -47,7 +47,7 @@ const axiosLib = {
     try {
       const client = await axiosLib.client(url, token);
       const res = await client.post(`/banks/resolve`, params);
-      if (res?.data?.message) return res.data.message;
+      if (res?.data?.message) return res.data.message.data;
       return res?.data;
     } catch (e) {
       errorResponse(e);
