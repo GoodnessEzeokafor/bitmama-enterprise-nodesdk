@@ -1,15 +1,12 @@
 import { BankCountryCode, BankResolveParam } from "types";
+import axiosLib from "utils/axios";
 
 const banks = {
-  list: (url:string, token:string, countryCode:BankCountryCode) => {
-    console.log(url);
-    console.log(token);
-    console.log(countryCode);
+  list: async(url:string, token:string, countryCode:BankCountryCode) => {
+    return await axiosLib.listBanks(url, token, countryCode);
   },
-  resolve: (url:string, token:string,param:BankResolveParam) => {
-    console.log(url);
-    console.log(token);
-    console.log(param);
+  resolve: async(url:string, token:string,param:BankResolveParam) => {
+    return await axiosLib.resolveBank(url, token, param);
   }
 }
 export default banks;

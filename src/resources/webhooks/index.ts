@@ -1,12 +1,13 @@
+import axiosLib from "utils/axios";
+
 const webhooks = {
-  create: (url:string, token:string, endpoint:string) => {
-    console.log(url)
-    console.log(token)
-    console.log(endpoint)
+  create: async(url:string, token:string, endpoint:string) => {
+    const data = { endpoint };
+    return await axiosLib.createWebhookEndpoint(url, token, data);
+
   },
-  get: (url:string, token:string) => {
-    console.log(url);
-    console.log(token);
+  get: async (url: string, token: string) => {
+    return await axiosLib.getWebhookEndpoint(url, token);
   }
 }
 export default webhooks;

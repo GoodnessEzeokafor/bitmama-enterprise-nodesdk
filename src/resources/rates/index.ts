@@ -1,15 +1,15 @@
 import { Ticker } from "types";
+import axiosLib from "utils/axios";
 
 // const root = "/address"
 const rates = {
-  rates: (url: string, token: string, ticker:Ticker) => {
-    console.log(url)
-    console.log(token)
-    console.log(ticker);
+  rates: async(url: string, token: string, ticker:Ticker) => {
+    return await axiosLib.getRate(url, token, ticker);
   },
   tickers: () => {
     const tickers: Ticker[] = [
       'xlmusd',
+      'xlmeur',
       'xlmngn',
       'btcghs',
       'ethghs',
@@ -23,6 +23,8 @@ const rates = {
       'xrpusd',
       'xrpngn',
       'xrpghs',
+      'xrpeur',
+      'usdeur',
       'celousd',
       'celongn',
       'celoghs',
