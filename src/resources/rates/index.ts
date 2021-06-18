@@ -6,7 +6,7 @@ const rates = {
   rates: async(url: string, token: string, ticker:Ticker) => {
     return await axiosLib.getRate(url, token, ticker);
   },
-  tickers: () => {
+  tickers: async() => {
     const tickers: Ticker[] = [
       'xlmusd',
       'xlmeur',

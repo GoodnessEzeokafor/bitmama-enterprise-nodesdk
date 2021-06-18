@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node  dist/index.js",
-    "example": "ts-node src/examples/resolveBank.ts",
+    "example": "ts-node src/examples/tickers.ts",
     "dev": "ts-node src/index.ts"
   },
   "repository": {
