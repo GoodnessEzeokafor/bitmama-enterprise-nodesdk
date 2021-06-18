@@ -1,11 +1,8 @@
-import BitmamaEnterprise from "../index"
+import { Environment } from "types";
 
-const bitmama = BitmamaEnterprise("3ee3701e057b26c6b55d0bee2", "dev")
-bitmama.enterpriseWallet()
-  .then((res: any) => {
-    console.log(res);
-  })
-  .catch((e: any) => console.log(e));
+export const TEST_API_TOKEN: string = "3ee3701e057b26c6b55d0bee2";
+export const TEST_ENV: Environment = "dev";
+
 // const body = {
 //   coin: "celo",
 //   label:"from sdk",
