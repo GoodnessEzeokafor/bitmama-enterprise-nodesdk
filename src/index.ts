@@ -53,7 +53,6 @@ const obj = {
     return resources.rates.tickers();
   },
   createWebhook: (endpoint: string) => {
-    
     return resources.webhooks.create(obj.BASE_URL, obj.TOKEN, endpoint);
   },
   getWebhook: () => {
