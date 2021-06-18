@@ -59,7 +59,7 @@ const obj = {
   getWebhook: () => {
     return resources.webhooks.get(obj.BASE_URL, obj.TOKEN);
   },
-  listBank: (countryCode:BankCountryCode) => {
+  listBanks: (countryCode:BankCountryCode) => {
     return resources.banks.list(obj.BASE_URL, obj.TOKEN,countryCode);
   },
   resolveBankAccount: (param:BankResolveParam) => {

@@ -56,9 +56,9 @@ const axiosLib = {
   listBanks: async (url: string, token: string, code: BankCountryCode) => {
     try {
       const client = await axiosLib.client(url, token);
-      const res = await client.post(`/banks/${code}`);
-      if (res?.data?.message) return res.data.message;
-      return res?.data;
+      const res = await client.get(`/banks/${code}`);
+      if (res?.data?.message) return res.data.message.data;
+      return res?.data?.data;
     } catch (e) {
       errorResponse(e);
     }
