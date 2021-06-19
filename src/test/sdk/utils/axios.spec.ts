@@ -1,5 +1,5 @@
 import client from "utils/axios";
-import { mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockListCryptoWalletResponse, mockPagination, mockTestBaseUrl, mockTestToken } from "../setup";
+import { mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker } from "../setup";
 jest.mock("axios")
 
 describe("mock test case for utils/axios.ts", () => {
@@ -38,4 +38,42 @@ describe("mock test case for utils/axios.ts", () => {
       expect(spy).toHaveBeenCalledTimes(1);
     });
   });
+  describe("return crypto rate", () => {
+    test("should return crypto rate", async () => {
+      const spy = jest
+        .spyOn(client, "getRate")
+        .mockResolvedValueOnce(mockRateResponse);
+      const res = await client.getRate(mockTestBaseUrl, mockTestToken, mockTicker);
+      expect(res).toMatchObject(mockRateResponse);
+      expect(res.buy).toBe(mockRateResponse.buy);
+      expect(res.sell).toBe(mockRateResponse.sell);
+      expect(spy).toHaveBeenCalledTimes(1);
+    })
+  });
+
+  describe("returns your webhook", () => {
+    test("should return webhook endpoint", async () => {
+      const spy = jest
+        .spyOn(client, "getWebhookEndpoint")
+        .mockResolvedValueOnce(mockGetWebhookResponse);
+      const res = await client.getWebhookEndpoint(mockTestBaseUrl, mockTestToken);
+      expect(res).toMatchObject(mockGetWebhookResponse);
+      expect(res.secret).toBe(mockGetWebhookResponse.secret);
+      expect(res.endpoint).toBe(mockGetWebhookResponse.endpoint);
+      expect(spy).toHaveBeenCalledTimes(1);
+    })
+  });
+
+  describe("return bank list", () => {
+    test("should return bank list", async () => {
+      const spy = jest
+      .spyOn(client, "listBanks")
+        .mockResolvedValueOnce(mockListBankResponse);
+      const res = await client.listBanks(mockTestBaseUrl, mockTestToken, 'ng');
+      expect(res).toMatchObject(mockListBankResponse);
+      expect(res.length).toEqual(3);
+      expect(spy).toHaveBeenCalledTimes(1);      
+    })
+  })
+
 });
