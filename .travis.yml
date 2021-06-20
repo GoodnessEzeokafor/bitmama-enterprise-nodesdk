@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+  - node
+
+install:
+  - npm ci 
+
+script:
+  - npm run test:coveralls
+
+notifications:
+  email: true
+

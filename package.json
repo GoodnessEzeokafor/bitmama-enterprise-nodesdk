@@ -1,0 +1,46 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.ts",
+    "test:coverage":"jest --coverage",
+    "test:coveralls":"jest --coverage && coveralls < coverage/lcov.info",
+    "start": "npm run build && node  dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodnessEzeokafor/bitmama-enterprise-nodesdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoodnessEzeokafor/bitmama-enterprise-nodesdk/issues"
+  },
+  "homepage": "https://github.com/GoodnessEzeokafor/bitmama-enterprise-nodesdk#readme",
+  "_moduleDirectories": [
+    "src"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "coveralls": "^3.1.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tsd": "^0.17.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "module-alias": "^2.2.2",
+    "reflect-metadata": "^0.1.13"
+  }
+}
