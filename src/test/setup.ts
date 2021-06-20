@@ -82,3 +82,22 @@ export const mockAddWebhookResponse: string = "New webhook endpoint added";
 export const mockaddWebhookParam: Record<string, string> = {
   endpoint: "https://61e00d0ead25.ngrok.io/webhook"
 };
+
+export const mockErrorObject1 = {
+  response: {
+    data: {
+      message:"TOKEN_HEADER_NOT_SET"
+    }
+  }
+}
+
+export const mockErrorObject2 = {
+  response: {
+    data: {
+      message:"INVALID_TOKEN"
+    }
+  }
+}
+
+export const mockErrorResponse1 = "Set Token Headers";
+export const mockErrorResponse2 = "Invalid Token Sent";
