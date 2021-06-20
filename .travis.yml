@@ -1,3 +1,15 @@
 language: node_js
+
 node_js:
-  - "14.16.0"
+  - node
+
+install:
+  - npm ci 
+
+script:
+  - npm run lint
+  - npm run test:coveralls
+
+notifications:
+  email: true
+
