@@ -79,6 +79,7 @@ export const mockBankResolveResponse = {
   account_name: "Test Account Number"
 };
 export const mockAddWebhookResponse: string = "New webhook endpoint added";
+
 export const mockaddWebhookParam: Record<string, string> = {
   endpoint: "https://61e00d0ead25.ngrok.io/webhook"
 };
@@ -101,3 +102,27 @@ export const mockErrorObject2 = {
 
 export const mockErrorResponse1 = "Set Token Headers";
 export const mockErrorResponse2 = "Invalid Token Sent";
+export const mockTickers: Ticker[] = [
+  'xlmusd',
+  'xlmeur',
+  'xlmngn',
+  'btcghs',
+  'ethghs',
+  'usdghs',
+  'xlmghs',
+  'btcusd',
+  'ethusd',
+  'btcngn',
+  'ethngn',
+  'usdngn',
+  'xrpusd',
+  'xrpngn',
+  'xrpghs',
+  'xrpeur',
+  'usdeur',
+  'celousd',
+  'celongn',
+  'celoghs',
+  'eurghs',
+  'eurngn'
+];

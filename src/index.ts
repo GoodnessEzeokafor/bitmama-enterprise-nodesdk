@@ -49,7 +49,7 @@ const obj = {
   getRate: (ticker: Ticker) => {
     return resources.rates.rates(obj.BASE_URL, obj.TOKEN,ticker);
   },
-  getTickers: () => {
+  tickers: () => {
     return resources.rates.tickers();
   },
   createWebhook: (endpoint: string) => {

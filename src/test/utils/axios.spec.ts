@@ -3,8 +3,7 @@
  */
 import client from "utils/axios";
 import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mockBankResolveResponse, mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker } from "../setup";
-jest.mock("axios")
-
+jest.mock("axios");
 describe("mock test case for utils/axios.ts", () => {
   afterEach(() => {
     jest.resetAllMocks();
@@ -22,6 +21,7 @@ describe("mock test case for utils/axios.ts", () => {
       expect(res?.address).toBe(mockCreateCryptoAddressResponse.address);
       expect(res).toMatchObject(mockCreateCryptoAddressResponse);
       expect(spy).toHaveBeenCalledTimes(1);
+
     });
   });
 

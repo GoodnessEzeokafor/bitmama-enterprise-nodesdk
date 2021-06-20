@@ -11,8 +11,7 @@
     "test:coverage":"jest --coverage",
     "test:coveralls":"jest --coverage && coveralls < coverage/lcov.info",
     "start": "npm run build && node  dist/index.js",
-    "dev": "ts-node src/index.ts",
-    "example":"ts-node src/examples/error.ts"
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
