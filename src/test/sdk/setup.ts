@@ -78,3 +78,7 @@ export const mockBankResolveResponse = {
   account_number: "0000000000",
   account_name: "Test Account Number"
 };
+export const mockAddWebhookResponse: string = "New webhook endpoint added";
+export const mockaddWebhookParam: Record<string, string> = {
+  endpoint: "https://61e00d0ead25.ngrok.io/webhook"
+};
