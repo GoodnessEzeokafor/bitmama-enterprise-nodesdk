@@ -1,5 +1,6 @@
 
 Nodejs API wrapper for [Bitmama Enterprise](https://bitmama.io/).
+This sdk can be used to create crypto wallet and receive crypto transactions
 
 ### Installation
 
