@@ -32,6 +32,13 @@ const rates = {
       'eurngn'
     ];
     return tickers;
-  }
+  },
+  EthToBtcTicker: () => {
+      return ""
+  },
+  EthToBtcRate: async() => {
+    
+  },
+
 }
 export default rates
