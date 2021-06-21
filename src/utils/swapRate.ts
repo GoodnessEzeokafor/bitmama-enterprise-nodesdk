@@ -28,7 +28,7 @@ const isEuroStableCoin = (coin:Coin) => {
   return stableCoins.includes(coin);
 }
 
-export const getSwapRate = async (url: string, token: string, base: Coin, substrate: Coin): Promise<number> => {
+export const utilRate = async (url: string, token: string, base: Coin, substrate: Coin): Promise<number> => {
   try{
     if(isStableCoin(base) && isStableCoin(substrate)){
       const rate:number = 1
