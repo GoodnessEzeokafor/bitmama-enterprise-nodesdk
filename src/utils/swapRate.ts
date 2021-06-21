@@ -28,59 +28,55 @@ const isEuroStableCoin = (coin:Coin) => {
   return stableCoins.includes(coin);
 }
 
-export const utilRate = async (url: string, token: string, base: Coin, substrate: Coin): Promise<number> => {
-  try{
-    if(isStableCoin(base) && isStableCoin(substrate)){
+export const utilRate = async (url: string, token: string, source: Coin, destination: Coin): Promise<number> => {
+  try {
+    // rate between two dollar stable coins
+    if(isStableCoin(source) && isStableCoin(destination)){
       const rate:number = 1
      return Promise.resolve(round(rate));   
     }
-    if(isEuroStableCoin(base) && isEuroStableCoin(substrate)){
+    // rate between two euro stable coin
+    if(isEuroStableCoin(source) && isEuroStableCoin(destination)){
       const rate:number = 1
      return Promise.resolve(round(rate));   
     }
-
-    if ((isEuroStableCoin(base) && isStableCoin(substrate)) || (isEuroStableCoin(substrate) && isStableCoin(base))) {
+    // rate between a dollar stable coin and euro stable coin 
+    if ((isEuroStableCoin(source) && isStableCoin(destination)) || (isEuroStableCoin(destination) && isStableCoin(source))) {
       const baseDollarReq = await axiosLib.getRate(url, token, `usdeur`);
       const baseRate: number = baseDollarReq['buy'];
-      console.log("BASE RATE",baseRate)
-      return Promise.resolve(baseRate);      
+      return Promise.resolve(baseRate);
     }
-    // subtrate is stable coin
-    if (isStableCoin(substrate)){
-      const baseDollarReq = await axiosLib.getRate(url, token, `${base}usd`);
+    // if source is stable coin
+    if(isStableCoin(source)){
+      const baseDollarReq = await axiosLib.getRate(url, token, `${destination}usd`);
+      const baseRate: number = baseDollarReq['buy'];
+      return Promise.resolve(baseRate);
+    }
+    // if destination coin is a stable coin
+    if (isStableCoin(destination)){
+      const baseDollarReq = await axiosLib.getRate(url, token, `${source}usd`);
       const baseRate: number = baseDollarReq['buy'];
       console.log("BASE RATE",baseRate)
       return Promise.resolve(baseRate);
     }
-    // base is stable coin
-    if(isStableCoin(base)){
-      const baseDollarReq = await axiosLib.getRate(url, token, `${substrate}usd`);
+    //source is an euro stable coin
+    if (isEuroStableCoin(source)){
+      const baseDollarReq = await axiosLib.getRate(url, token, `${destination}eur`);
       const baseRate: number = baseDollarReq['buy'];
       console.log("BASE RATE",baseRate)
       return Promise.resolve(baseRate);
-    }
-  
-    // subtrate is an euro stable coin
-    if (isEuroStableCoin(substrate)){
-      const baseDollarReq = await axiosLib.getRate(url, token, `${base}eur`);
+    }  
+    // destination is an euro stable coin
+    if (isEuroStableCoin(destination)){
+      const baseDollarReq = await axiosLib.getRate(url, token, `${source}eur`);
       const baseRate: number = baseDollarReq['buy'];
-      console.log("BASE RATE",baseRate)
-      return Promise.resolve(baseRate);
-      
-    }
-    //base is an euro stable coin
-    if (isEuroStableCoin(base)){
-      const baseDollarReq = await axiosLib.getRate(url, token, `${substrate}eur`);
-      const baseRate: number = baseDollarReq['buy'];
-      console.log("BASE RATE",baseRate)
       return Promise.resolve(baseRate);
     }
-
-    const baseDollarReq = await axiosLib.getRate(url, token, `${base}usd`);
-    const substrateDollarReq = await axiosLib.getRate(url, token, `${substrate}usd`);
-    const baseRate: number = baseDollarReq['buy'];
-    const substrateRate: number = substrateDollarReq['buy'];
-    return Promise.resolve(round(baseRate / substrateRate, 5));  
+    const sourceDollarReq = await axiosLib.getRate(url, token, `${source}usd`);
+    const destinationDollarReq = await axiosLib.getRate(url, token, `${destination}usd`);
+    const baseRate: number = sourceDollarReq['buy'];
+    const substrateRate: number = destinationDollarReq['buy'];
+    return Promise.resolve(round(baseRate / substrateRate, 5));
   }catch(e){
     return Promise.reject(e);    
   } 
