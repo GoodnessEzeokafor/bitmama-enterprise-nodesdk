@@ -64,11 +64,44 @@ const obj = {
   resolveBankAccount: (param:BankResolveParam) => {
     return resources.banks.resolve(obj.BASE_URL, obj.TOKEN, param);
   },
+  // btc to eth rate
+  BtcEthRate: () => {
+    return resources.rates.BtcEthRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to usdt
+  BtcUsdtRate: () => {
+    return resources.rates.BtcUsdtRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to usdc
+  BtcUsdcRate: () => {
+    return resources.rates.BtcUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to xrp
+  BtcXrpRate: () => {
+    return resources.rates.BtcXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to xlm
+  BtcXlmRate: () => {
+    return resources.rates.BtcXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to celo rate
+  BtcCeloRate: () => {
+    return resources.rates.BtcCeloRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to cusd
+  BtcCusdRate: () => {
+    return resources.rates.BtcCeloRate(obj.BASE_URL, obj.TOKEN);
+  },
+  //ngn
+  BtcNGNRate: () => {
+    return resources.rates.BtcNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
+    //ghs
+  BtcGHSRate:() => {
+    return resources.rates.BtcGHSRate(obj.BASE_URL, obj.TOKEN);
+  }
 
 }
-
-
-
 const initialization = obj.init
 const BitmamaEnterprise = initialization.bind(obj)
 export default BitmamaEnterprise
