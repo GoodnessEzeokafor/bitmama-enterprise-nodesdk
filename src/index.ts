@@ -295,7 +295,6 @@ const obj = {
   UsdtBtcRate: () => {
     return resources.rates.UsdtBtcRate(obj.BASE_URL, obj.TOKEN);
   },
-
   // usdt to eth
   UsdtEthRate: () => {
     return resources.rates.UsdtEthRate(obj.BASE_URL, obj.TOKEN);
@@ -321,15 +320,41 @@ const obj = {
     return resources.rates.UsdtCeurRate(obj.BASE_URL, obj.TOKEN);
   },
 // usdc to ngn
+  UsdcNGNRate: () => {
+    return resources.rates.UsdcNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to ghs
+  UsdcGHSRate: () => {
+    return resources.rates.UsdcGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to usd
+  UsdcUSDRate: () => {
+    return resources.rates.UsdcUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to btc
+  UsdcBtcRate: () => {
+    return resources.rates.UsdcBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to eth
+  UsdcEthRate: () => {
+    return resources.rates.UsdcEthRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to xrp
+  UsdcXrpRate: () => {
+    return resources.rates.UsdcXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to xlm
+  UsdcXlmRate: () => {
+    return resources.rates.UsdcXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to cusd
+  UsdcCusdRate: () => {
+    return resources.rates.UsdcCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdc to ceur
-
+  UsdcCeurRate: () => {
+    return resources.rates.UsdcCeurRate(obj.BASE_URL, obj.TOKEN);
+  }
 
 
   // cusd to ngn

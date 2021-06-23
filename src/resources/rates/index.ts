@@ -348,6 +348,43 @@ const rates = {
   UsdtCeurRate: async (url: string, token: string) => {
     const rate = cryptoRate(url, token, "usdt", "ceur");
     return rate;
+  },
+  UsdcNGNRate: async (url: string, token: string) => {
+    const ticker: Ticker = "usdghs";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  UsdcGHSRate: async (url: string, token: string) => {
+    const ticker: Ticker = "usdghs";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  UsdcUSDRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "usd");
+    return rate;
+  },
+
+  UsdcBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "btc");
+    return rate;
+  },
+  UsdcEthRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "eth");
+    return rate;
+  },
+  UsdcXrpRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "xrp");
+    return rate;
+  },
+  UsdcXlmRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "xlm");
+    return rate;
+  },
+  UsdcCusdRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "cusd");
+    return rate;
+  },
+  UsdcCeurRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdc", "ceur");
+    return rate;
   }
 }
 export default rates
