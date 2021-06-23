@@ -1,34 +1,15 @@
 import { Coin } from "types";
 import { round } from 'lodash';
 import axiosLib from "utils/axios";
-const isStableCoin = (coin:Coin): boolean => {
-  const coins: Coin[] = [
-    'usdt',
-    'usdc',
-    'busd',
-    'dai',
-    'ust',
-    'pax',
-    'husd',
-    'tusd',
-    'jst',
-    'usdn',
-    'usdt-tron',
-    'cusd',
-    'husd',
-    'gusd',
-    'usd'
-  ];
 
+export const isStableCoin = (coin: Coin): boolean => {
+  const coins: Coin[] = ['usdt', 'usdc', 'busd', 'dai', 'ust', 'pax', 'husd', 'tusd', 'jst', 'usdn', 'usdt-tron', 'cusd', 'husd', 'gusd', 'usd'];
   return coins.includes(coin);
 }
-const isEuroStableCoin = (coin:Coin) => {
-  const stableCoins: Coin[] = [
-    'ceur'
-  ]
+export const isEuroStableCoin = (coin:Coin) => {
+  const stableCoins: Coin[] = ['ceur'];
   return stableCoins.includes(coin);
 }
-
 export const cryptoRate = async (url: string, token: string, source: Coin, destination: Coin): Promise<number> => {
   try {
     // rate between two dollar stable coins
