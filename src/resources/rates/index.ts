@@ -301,8 +301,20 @@ const rates = {
     const ticker: Ticker = "eurghs";
     return await axiosLib.getRate(url, token, ticker);
   },
+  CeurUSDRate: async (url: string, token: string) => {
+    const ticker: Ticker = "usdeur";
+    return await axiosLib.getRate(url, token, ticker);
+  },
   CeurEthRate: async (url: string, token: string) => {
     const rate = cryptoRate(url, token, "ceur", "eth");
+    return rate;
+  },
+  CeurXrpRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "ceur", "xrp");
+    return rate;
+  },
+  CeurBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "ceur", "btc");
     return rate;
   },
   CeurXlmRate: async (url: string, token: string) => {

@@ -392,18 +392,38 @@ const obj = {
     return await resources.rates.CusdCeurRate(obj.BASE_URL, obj.TOKEN);
   },
 
-
-
-    // ceur to ngn
+  // ceur to ngn
+  CeurNGNRate: () => {
+    return resources.rates.CeurNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to ghs
+  CeurGHSRate: () => {
+    return resources.rates.CeurGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to usd
+  CeurUSDRate: () => {
+    return resources.rates.CeurUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to btc
+  CeurBtcRate: () => {
+    return resources.rates.CeurBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to eth
+  CeurEthRate: () => {
+    return resources.rates.CeurEthRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to xrp
+  CeurXrpRate: () => {
+    return resources.rates.CeurXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to xlm
+  CeurXlmRate: () => {
+    return resources.rates.CeurXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
   // ceur to cusd
-  // ceur to ceur
-
+  CeurCusdRate: () => {
+    return resources.rates.CeurCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
 }
 const initialization = obj.init
 const BitmamaEnterprise = initialization.bind(obj)
