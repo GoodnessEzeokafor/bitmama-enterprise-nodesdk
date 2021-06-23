@@ -260,16 +260,24 @@ const rates = {
     const ticker: Ticker = "usdghs";
     return await axiosLib.getRate(url, token, ticker);
   },
-  CusdEthRate: async (url: string, token: string) => {
-    const rate = cryptoRate(url, token, "cusd", "eth");
+  CusdUSDRate: async (url: string, token: string) => {
+    const rate = await cryptoRate(url, token, "cusd", "usd");
     return rate;
   },
-  CusdXlmRate: async (url: string, token: string) => {
-    const rate = cryptoRate(url, token, "cusd", "xlm");
+  CusdBtcRate: async (url: string, token: string) => {
+    const rate = await cryptoRate(url, token, "cusd", "btc");
+    return rate;
+  },
+  CusdEthRate: async (url: string, token: string) => {
+    const rate = await cryptoRate(url, token, "cusd", "eth");
+    return rate;
+  },
+  CusdXlmRate: async (url: string, token: string):Promise<number> => {
+    const rate:number = await cryptoRate(url, token, "cusd", "xlm");
     return rate;
   },
   CusdCeurRate: async (url: string, token: string) => {
-    const rate = cryptoRate(url, token, "cusd", "ceur");
+    const rate = await cryptoRate(url, token, "cusd", "ceur");
     return rate;
   },
   CusdUsdtRate: async (url: string, token: string) => {
@@ -277,7 +285,11 @@ const rates = {
     return rate;
   },
   CusdUsdcRate: async (url: string, token: string) => {
-    const rate = cryptoRate(url, token, "cusd", "usdc");
+    const rate = await cryptoRate(url, token, "cusd", "usdc");
+    return rate;
+  },
+  CusdXrpRate: async (url: string, token: string) => {
+    const rate = await cryptoRate(url, token, "cusd", "xrp");
     return rate;
   },
   // ceur

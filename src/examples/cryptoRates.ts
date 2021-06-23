@@ -21,7 +21,7 @@ const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
 
 // implementation 2
 const rate = async () => {
-  const rate1 = await bitmama.BtcUsdRate();
+  const rate1 = await bitmama.CusdNGNRate();
   return rate1;
 }
 rate()
