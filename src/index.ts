@@ -198,30 +198,85 @@ const obj = {
   },
 
   // xrp to ngn
+  XrpNGNRate: () => {
+    return resources.rates.XrpNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to ghs
+  XrpGHSRate: () => {
+    return resources.rates.XrpGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to usd
+  XrpUSDRate: () => {
+    return resources.rates.XrpUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to btc
+  XrpBtcRate: () => {
+    return resources.rates.XrpBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to eth
-  // xrp to xrp
+  XrpEthRate: () => {
+    return resources.rates.XrpEthRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to xlm
+  XrpXlmRate: () => {
+    return resources.rates.XrpXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to usdt
+  XrpUsdtRate: () => {
+    return resources.rates.XrpUsdtRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to usdc
+  XrpUsdcRate: () => {
+    return resources.rates.XrpUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to cusd
+  XrpCusdRate: () => {
+    return resources.rates.XrpCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xrp to ceur
-
-
+  XrpCeurRate: () => {
+    return resources.rates.XrpCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to ngn
+  XlmNGNRate: () => {
+    return resources.rates.XlmNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to ghs
+  XlmGHSRate: () => {
+    return resources.rates.XlmGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to usd
+  XlmUSDRate: () => {
+    return resources.rates.XlmUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to btc
+  XlmBtcRate: () => {
+    return resources.rates.XlmBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to eth
+  XlmEthRate: () => {
+    return resources.rates.XlmEthRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to xrp
-  // xlm to xlm
+  XlmXrpRate: () => {
+    return resources.rates.XlmXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to usdt
+  XlmUsdtRate: () => {
+    return resources.rates.XlmUsdtRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to usdc
+  XlmUsdcRate: () => {
+    return resources.rates.XlmUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to cusd
+  XlmCusdRate: () => {
+    return resources.rates.XlmCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
   // xlm to ceur
-
+  XlmCeurRate: () => {
+    return resources.rates.XlmCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
 
 
     // xlm to ngn

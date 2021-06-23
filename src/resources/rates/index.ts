@@ -178,8 +178,16 @@ const rates = {
     const ticker: Ticker = "xrpghs";
     return await axiosLib.getRate(url, token, ticker);
   },
+  XrpUSDRate: async (url: string, token: string) => {
+    const ticker: Ticker = "xrpusd";
+    return await axiosLib.getRate(url, token, ticker);
+  },
   XrpEthRate: async (url: string, token: string) => {
     const rate = cryptoRate(url, token, "xrp", "eth");
+    return rate;
+  },
+  XrpBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "xrp", "btc");
     return rate;
   },
   XrpXlmRate: async (url: string, token: string) => {
@@ -210,6 +218,18 @@ const rates = {
   XlmGHSRate: async (url: string, token: string) => {
     const ticker: Ticker = "xlmghs";
     return await axiosLib.getRate(url, token, ticker);
+  },
+  XlmUSDRate: async (url: string, token: string) => {
+    const ticker: Ticker = "xlmusd";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  XlmXrpRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "xlm", "xrp");
+    return rate;
+  },
+  XlmBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "xlm", "btc");
+    return rate;
   },
   XlmEthRate: async (url: string, token: string) => {
     const rate = cryptoRate(url, token, "xlm", "eth");
