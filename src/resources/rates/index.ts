@@ -309,5 +309,17 @@ const rates = {
     const rate = cryptoRate(url, token, "ceur", "usdc");
     return rate;
   },
+  UsdtGHSRate: async (url: string, token: string) => {
+    const ticker: Ticker = "usdghs";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  UsdtNGNRate: async (url: string, token: string) => {
+    const ticker: Ticker = "usdngn";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  UsdtUSDRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "usd");
+    return rate;
+  }
 }
 export default rates

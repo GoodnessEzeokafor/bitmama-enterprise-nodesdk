@@ -5,7 +5,7 @@ export type Pagination = {
 
 export type Coin = "btc" | "tbtc" | "celo" | "xlm" | "xrp" | "eth" | "teth" | 'ceur' | 'usdt' |
   'usdc' | 'busd' | 'dai' | 'ust' | 'pax' | 'husd' | 'tusd' | 'jst' | 'usdn' | 'usdt-tron' | 'cusd' |
-  'husd' | 'gusd';
+  'husd' | 'gusd' | 'usd';
    
 export type Environment = "prod" | "production" | "dev" | "development";
 

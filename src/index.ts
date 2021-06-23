@@ -279,21 +279,18 @@ const obj = {
   },
 
 
-    // xlm to ngn
-  // xlm to ghs
-  // xlm to usd
-  // xlm to btc
-  // xlm to eth
-  // xlm to xrp
-  // xlm to xlm
-  // xlm to usdt
-  // xlm to usdc
-  // xlm to cusd
-  // xlm to ceur
-
   // usdt to ngn
+  UsdtNGNRate: () => {
+    return resources.rates.UsdtNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdt to ghs
+  UsdtGHSRate: () => {
+    return resources.rates.UsdtGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdt to usd
+  UsdtUSDRate: () => {
+    return resources.rates.UsdtUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
   // usdt to btc
   // usdt to eth
   // usdt to xrp

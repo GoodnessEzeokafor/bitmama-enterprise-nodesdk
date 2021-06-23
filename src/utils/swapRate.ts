@@ -17,6 +17,7 @@ const isStableCoin = (coin:Coin): boolean => {
     'cusd',
     'husd',
     'gusd',
+    'usd'
   ];
 
   return coins.includes(coin);
