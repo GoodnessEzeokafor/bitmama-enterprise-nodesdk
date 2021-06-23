@@ -292,13 +292,34 @@ const obj = {
     return resources.rates.UsdtUSDRate(obj.BASE_URL, obj.TOKEN);
   },
   // usdt to btc
-  // usdt to eth
-  // usdt to xrp
-  // usdt to xlm
-  // usdt to usdc
-  // usdt to cusd
-  // usdt to ceur
+  UsdtBtcRate: () => {
+    return resources.rates.UsdtBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
 
+  // usdt to eth
+  UsdtEthRate: () => {
+    return resources.rates.UsdtEthRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // usdt to xrp
+  UsdtXrpRate: () => {
+    return resources.rates.UsdtXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // usdt to xlm
+  UsdtXlmRate: () => {
+    return resources.rates.UsdtXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // usdt to usdc
+  UsdtUsdcRate: () => {
+    return resources.rates.UsdtUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // usdt to cusd
+  UsdtCusdRate: () => {
+    return resources.rates.UsdtCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // usdt to ceur
+  UsdtCeurRate: () => {
+    return resources.rates.UsdtCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
 // usdc to ngn
   // usdc to ghs
   // usdc to usd

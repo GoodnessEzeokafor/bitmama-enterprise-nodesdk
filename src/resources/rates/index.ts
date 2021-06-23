@@ -320,6 +320,34 @@ const rates = {
   UsdtUSDRate: async (url: string, token: string) => {
     const rate = cryptoRate(url, token, "usdt", "usd");
     return rate;
+  },
+  UsdtBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "btc");
+    return rate;
+  },
+  UsdtEthRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "eth");
+    return rate;
+  },
+  UsdtXrpRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "xrp");
+    return rate;
+  },
+  UsdtXlmRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "xlm");
+    return rate;
+  },
+  UsdtUsdcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "usdc");
+    return rate;
+  },
+  UsdtCusdRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "cusd");
+    return rate;
+  },
+  UsdtCeurRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "usdt", "ceur");
+    return rate;
   }
 }
 export default rates
