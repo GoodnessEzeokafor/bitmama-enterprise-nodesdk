@@ -148,20 +148,139 @@ const obj = {
   EthCeurRate: () => {
     return resources.rates.EthCeurRate(obj.BASE_URL, obj.TOKEN);
   },
+  // eth to usd
   EthUsdRate: () => {
     return resources.rates.EthUsdRate(obj.BASE_URL, obj.TOKEN);
   },
-  // eth to usd
+  // celo to ngn
+  CeloNGNRate: () => {
+    return resources.rates.CeloNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to ghs
+  CeloGHSRate: () => {
+    return resources.rates.CeloGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to usd
+  CeloUSDRate: () => {
+    return resources.rates.CeloUSDRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to eth
+  CeloEthRate: () => {
+    return resources.rates.CeloEthRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to btc 
+  CeloBtcRate: () => {
+    return resources.rates.CeloBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to xrp
+  CeloXrpRate: () => {
+    return resources.rates.CeloEthRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to xlm
+  CeloXlmRate: () => {
+    return resources.rates.CeloXlmRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to cusd
+  CeloCusdRate: () => {
+    return resources.rates.CeloCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to ceur
+  CeloCeurRate: () => {
+    return resources.rates.CeloCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to usdt
+  CeloUsdtRate: () => {
+    return resources.rates.CeloUsdtRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // celo to usdc
+  CeloUsdcRate: () => {
+    return resources.rates.CeloUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
+
+  // xrp to ngn
+  // xrp to ghs
+  // xrp to usd
+  // xrp to btc
+  // xrp to eth
+  // xrp to xrp
+  // xrp to xlm
+  // xrp to usdt
+  // xrp to usdc
+  // xrp to cusd
+  // xrp to ceur
+
+
+  // xlm to ngn
+  // xlm to ghs
+  // xlm to usd
+  // xlm to btc
+  // xlm to eth
+  // xlm to xrp
+  // xlm to xlm
+  // xlm to usdt
+  // xlm to usdc
+  // xlm to cusd
+  // xlm to ceur
+
+
+
+    // xlm to ngn
+  // xlm to ghs
+  // xlm to usd
+  // xlm to btc
+  // xlm to eth
+  // xlm to xrp
+  // xlm to xlm
+  // xlm to usdt
+  // xlm to usdc
+  // xlm to cusd
+  // xlm to ceur
+
+  // usdt to ngn
+  // usdt to ghs
+  // usdt to usd
+  // usdt to btc
+  // usdt to eth
+  // usdt to xrp
+  // usdt to xlm
+  // usdt to usdc
+  // usdt to cusd
+  // usdt to ceur
+
+// usdc to ngn
+  // usdc to ghs
+  // usdc to usd
+  // usdc to btc
+  // usdc to eth
+  // usdc to xrp
+  // usdc to xlm
+  // usdc to cusd
+  // usdc to ceur
+
+
+
+  // cusd to ngn
+  // cusd to ghs
+  // cusd to usd
+  // cusd to btc
+  // cusd to eth
+  // cusd to xrp
+  // cusd to xlm
+  // usdc to cusd
+  // cusd to ceur
 
 
 
 
-
-
-
-
-
-
+    // ceur to ngn
+  // ceur to ghs
+  // ceur to usd
+  // ceur to btc
+  // ceur to eth
+  // ceur to xrp
+  // ceur to xlm
+  // ceur to cusd
+  // ceur to ceur
 
 }
 const initialization = obj.init

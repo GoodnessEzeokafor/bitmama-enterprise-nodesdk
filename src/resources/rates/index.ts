@@ -161,6 +161,14 @@ const rates = {
     const rate = cryptoRate(url, token, "celo", "usdc");
     return rate;
   },
+  CeloUSDRate: async (url: string, token: string) => {
+    const ticker: Ticker = "btcusd";
+    return await axiosLib.getRate(url, token, ticker);
+  },
+  CeloBtcRate: async (url: string, token: string) => {
+    const rate = cryptoRate(url, token, "celo", "btc");
+    return rate;
+  },
   // ripple
   XrpNGNRate: async (url: string, token: string) => {
     const ticker: Ticker = "xrpngn";
