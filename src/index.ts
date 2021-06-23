@@ -92,14 +92,76 @@ const obj = {
   BtcCusdRate: () => {
     return resources.rates.BtcCeloRate(obj.BASE_URL, obj.TOKEN);
   },
-  //ngn
+  // btc to ceur
+  BtcCeurRate: () => {
+    return resources.rates.BtcCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // btc to ngn
   BtcNGNRate: () => {
     return resources.rates.BtcNGNRate(obj.BASE_URL, obj.TOKEN);
   },
-    //ghs
+  //btc to ghs
   BtcGHSRate:() => {
     return resources.rates.BtcGHSRate(obj.BASE_URL, obj.TOKEN);
-  }
+  },
+  // btc to usd
+  BtcUsdRate: () => {
+    return resources.rates.BtcUsdRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to ngn
+  EthNGNRate: () => {
+    return resources.rates.EthNGNRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to ghs
+  EthGHSRate:() => {
+    return resources.rates.EthGHSRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to btc
+  EthBtcRate: () => {
+    return resources.rates.EthBtcRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to celo
+  EthCeloRate: () => {
+    return resources.rates.EthCeloRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to xrp 
+  EthXrpRate: () => {
+    return resources.rates.EthXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to xlm
+  EthXlmRate:() => {
+    return resources.rates.EthXrpRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to cusd
+  EthCusdRate: () => {
+    return resources.rates.EthCusdRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to usdt
+  EthUsdtRate: () => {
+    return resources.rates.EthUsdtRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to usdc
+  EthUsdcRate: () => {
+    return resources.rates.EthUsdcRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to ceur
+  EthCeurRate: () => {
+    return resources.rates.EthCeurRate(obj.BASE_URL, obj.TOKEN);
+  },
+  EthUsdRate: () => {
+    return resources.rates.EthUsdRate(obj.BASE_URL, obj.TOKEN);
+  },
+  // eth to usd
+
+
+
+
+
+
+
+
+
+
 
 }
 const initialization = obj.init

@@ -75,8 +75,15 @@ const rates = {
     const rate = cryptoRate(url, token, "eth", "ceur");
     return rate;
   },
-
+  EthUsdRate: async (url: string, token: string) => {
+    const ticker: Ticker = "ethusd";
+    return await axiosLib.getRate(url, token, ticker);
+  },
   // bitcoin
+  BtcUsdRate: async (url: string, token: string) => {
+    const ticker: Ticker = "btcusd";
+    return await axiosLib.getRate(url, token, ticker);
+  },
   BtcNGNRate: async (url: string, token: string) => {
     const ticker: Ticker = "btcngn";
     return await axiosLib.getRate(url, token, ticker);
