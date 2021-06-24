@@ -43,5 +43,5 @@ describe("mock test case for utils/axios.ts", () => {
     expect(res).toBe(1)
   })
 
-  
+
 })
