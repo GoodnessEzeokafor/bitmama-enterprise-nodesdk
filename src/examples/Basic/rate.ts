@@ -308,26 +308,77 @@ getEthUsdcRate()
    * @returns 
    */
 
-// const getEthCeurRate = async () => {
-//   const rate = await bitmama.EthCeurRate()
-//   return rate;
-// }
-// const getEthUsdRate = async () => {
-//   const rate = await bitmama.EthUsdRate()
-//   return rate;
-// }
-// const getCeloNGNRate = async () => {
-//   const rate = await bitmama.CeloNGNRate()
-//   return rate;
-// }
-// const getCeloGHSRate = async () => {
-//   const rate = await bitmama.CeloGHSRate()
-//   return rate;
-// }
-// const getCeloUSDRate = async () => {
-//   const rate = await bitmama.CeloUSDRate()
-//   return rate;
-// }
+  /**
+   * @func EthCeurRate
+   * @description eth to ceur
+   * 
+const getEthCeurRate = async () => {
+  const rate = await bitmama.EthCeurRate()
+  return rate;
+}
+getEthCeurRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+   
+   */
+/**
+ * @func EthUsdRate
+ * @description eth to usdt
+ * 
+ const getEthUsdRate = async () => {
+  const rate = await bitmama.EthUsdRate()
+  return rate;
+}
+getEthUsdRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+ * @returns 
+ */
+
+/**
+ * @func CeloNGNRate
+ * @description celo to ngn 
+ * 
+const getCeloNGNRate = async () => {
+  const rate = await bitmama.CeloNGNRate()
+  return rate;
+}
+getCeloNGNRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e)) 
+ */
+
+/**
+ * @func CeloGHSRate
+ * @description celo to ghs
+ * 
+const getCeloGHSRate = async () => {
+  const rate = await bitmama.CeloGHSRate()
+  return rate;
+}
+getCeloGHSRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+ 
+ * @returns 
+ */
+
+/**
+ * @func CeloUSDRate
+ * @description celo to usd
+ * 
+ 
+ */
+const getCeloUSDRate = async () => {
+  const rate = await bitmama.CeloUSDRate()
+  return rate;
+}
+getCeloUSDRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+
 // const getCeloEthRate = async () => {
 //   const rate = await bitmama.CeloEthRate();
 //   return rate;
@@ -567,32 +618,74 @@ getEthUsdcRate()
 //     const rate = await bitmama.CeurNGNRate()
 //     return rate;
 //   }
-//   const getCeurGHSRate = async () => {
-//     const rate = await bitmama.CeurGHSRate()
-//     return rate;
-//   }
-//   const getCeurUSDRate = async () => {
-//     const rate = await bitmama.CeurUSDRate()
-//     return rate;
-//   }
+
+/**
+ * @func CeurGHSRate
+ * @description ceur to ghs
+ * 
+  const getCeurGHSRate = async () => {
+    const rate = await bitmama.CeurGHSRate()
+    return rate;
+  }
+getCeurGHSRate().then(res => console.log(res)).catch(e => console.log(e))
+  
+ */
+ 
+
+/**
+ * @func CeurUSDRate
+ * @description ceur to usd
+ * 
+   const getCeurUSDRate = async () => {
+    const rate = await bitmama.CeurUSDRate()
+    return rate;
+  }
+getCeurUSDRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+ */
+  
+
 //   const getCeurBtcRate = async () => {
 //     const rate = await bitmama.CeurBtcRate()
 //     return rate;
 //   }
-//   const getCeurEthRate = async () => {
-//     const rate = await bitmama.CeurEthRate()
-//     return rate;
-//   }
-//   const getCeurXrpRate = async () => {
-//     const rate = await bitmama.CeurXrpRate()
-//     return rate;
-//   }
+/**
+ * @func CeurEthRate
+ * @description ceur to eth
+ * 
+  const getCeurEthRate = async () => {
+    const rate = await bitmama.CeurEthRate()
+    return rate;
+  }
+getCeurEthRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+  
+ */
+ 
+
+/**
+ * @func CeurXrpRate
+ * @description ceur to xrp 
+ * 
+  const getCeurXrpRate = async () => {
+    const rate = await bitmama.CeurXrpRate()
+    return rate;
+   }
+getCeurXrpRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+   
+
+ */
+
+  
 /**
  * @func CeurXlmRate
  * @description ceur to xlm
  * 
- 
- */
     const getCeurXlmRate = async () => {
       const rate = await bitmama.CeurXlmRate()
       return rate;
@@ -601,7 +694,9 @@ getEthUsdcRate()
 getCeurXlmRate()
   .then(res => console.log(res))
   .catch(e => console.log(e))
-    
+     
+ */
+
 
 /**
  * @func CeurCusdRate

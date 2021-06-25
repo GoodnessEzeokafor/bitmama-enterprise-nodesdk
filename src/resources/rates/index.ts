@@ -162,7 +162,7 @@ const rates = {
     return rate;
   },
   CeloUSDRate: async (url: string, token: string) => {
-    const ticker: Ticker = "btcusd";
+    const ticker: Ticker = "celousd";
     return await axiosLib.getRate(url, token, ticker);
   },
   CeloBtcRate: async (url: string, token: string) => {
