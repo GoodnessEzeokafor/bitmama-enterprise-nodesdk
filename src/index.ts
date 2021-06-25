@@ -174,7 +174,7 @@ const obj = {
   },
   // celo to xrp
   CeloXrpRate: () => {
-    return resources.rates.CeloEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloXrpRate(obj.BASE_URL, obj.TOKEN);
   },
   // celo to xlm
   CeloXlmRate: () => {

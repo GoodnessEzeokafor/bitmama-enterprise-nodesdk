@@ -142,15 +142,15 @@ const rates = {
     return rate;
   },
   CeloXlmRate: async (url: string, token: string) => {
-    const rate: number = await cryptoRate(url, token, "btc", "eth");
+    const rate: number = await cryptoRate(url, token, "celo", "xrp");
     return rate;
   },
   CeloCusdRate: async (url: string, token: string) => {
-    const rate: number = await cryptoRate(url, token, "btc", "cusd");
+    const rate: number = await cryptoRate(url, token, "celo", "cusd");
     return rate;
   },
   CeloCeurRate: async (url: string, token: string) => {
-    const rate = await cryptoRate(url, token, "btc", "ceur");
+    const rate = await cryptoRate(url, token, "celo", "ceur");
     return rate;
   },
   CeloUsdtRate: async (url: string, token: string) => {
