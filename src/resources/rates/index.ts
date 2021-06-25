@@ -191,7 +191,7 @@ const rates = {
     return rate;
   },
   XrpXlmRate: async (url: string, token: string) => {
-    const rate = await cryptoRate(url, token, "xrp", "eth");
+    const rate = await cryptoRate(url, token, "xrp", "xlm");
     return rate;
   },
   XrpCusdRate: async (url: string, token: string) => {
@@ -374,7 +374,7 @@ const rates = {
     return rate;
   },
   UsdcNGNRate: async (url: string, token: string) => {
-    const ticker: Ticker = "usdghs";
+    const ticker: Ticker = "usdngn";
     return await axiosLib.getRate(url, token, ticker);
   },
   UsdcGHSRate: async (url: string, token: string) => {
