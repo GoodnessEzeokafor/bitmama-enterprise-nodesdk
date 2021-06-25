@@ -1,0 +1,619 @@
+// import {Ticker } from "types";
+import BitmamaEnterprise from "../../index"
+import { TEST_API_TOKEN, TEST_ENV } from "../setup";
+
+
+const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
+
+/**
+ * @func getRate
+ * @description rate
+ * 
+const getRate = async () => {
+  const ticker: Ticker = "xlmngn";
+  const rate = await bitmama.getRate(ticker);
+  return rate;
+}
+
+getRate()
+  .then(async (res) => {
+    console.log(res)
+  })
+  .catch(e => console.log(e))
+
+ */
+
+/**
+ * @func BtcEthRate
+ * @description btc to eth rate
+ * 
+const getBtcEthRate = async () => {
+  const rate = bitmama.BtcEthRate()
+  return rate
+}
+getBtcEthRate()
+  .then(async (res) => {
+    console.log(res);
+  })
+  .catch((e) => console.log(e))
+ 
+*/
+
+
+
+/**
+ * @BtcUsdtRate
+ * @description btc to usdt rate
+ * 
+ const getBtcUsdtRate = async () => {
+  const rate = bitmama.BtcUsdtRate()
+  return rate;
+}
+
+getBtcUsdtRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+ */
+
+
+
+
+
+
+/**
+ * @func BtcUsdcRate
+ * @description btc to usdc
+ * 
+ bitmama.BtcUsdcRate()
+  .then((res: any) => console.log(res))
+  .catch((e: any) => console.log(e))
+ */
+
+
+
+/**
+ * @func BtcXrpRate
+ * @description btc to xrp
+ * 
+const getBtcXrpRate = async () => {
+  const rate = bitmama.BtcXrpRate()
+  return rate
+}
+getBtcXrpRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+*/
+
+/**
+ * @func BtcXlmRate
+ * @description btc to xlm
+ * 
+const getBtcXlmRate = async () => {
+  const rate = bitmama.BtcXlmRate()
+  return rate;
+}
+getBtcXlmRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+ 
+ */
+
+  /**
+   * @func BtcCeloRate
+   * @description btc to celo
+   * 
+const getBtcCeloRate = async () => {
+  const rate = await bitmama.BtcCeloRate()
+  return rate
+}
+getBtcCeloRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+   
+   */
+
+  /**
+   * @func BtcCeurRate
+   * @description btc to ceur
+   *
+const getBtcCeurRate =  async() => {
+  const rate = await bitmama.BtcCeurRate()
+  return rate
+}
+getBtcCeurRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+   
+   */
+
+
+
+/**
+ * @func BtcNGNRate
+ * @description btc to ngn
+ * 
+const getBtcNGNRate = async () => {
+  const rate = await bitmama.BtcNGNRate()
+  return rate;
+}
+getBtcNGNRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+ 
+ */
+
+
+  /**
+   * @func BtcGHSRate 
+   * @description  btc to ghs
+   * @rate btc to ghs
+   * 
+  const getBtcGHSRate = async () => {
+  const rate = await bitmama.BtcGHSRate();
+  return rate;
+}
+getBtcGHSRate()
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+
+   */
+
+
+ /**
+  * @func BtcUsdRate
+  * @description btc to usd
+  * @rate btc to usd
+  * 
+const getBtcUsdRate = async () => {
+  const rate = await bitmama.BtcUsdRate()
+  return rate;
+}
+getBtcUsdRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+  
+  */
+
+  /** 
+   * @func  EthNGNRate
+   * @description eth to ngn
+   * 
+const getEthNGNRate = async () => {
+  const rate = await bitmama.EthNGNRate();
+  return rate;
+}
+getEthNGNRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+   
+   */
+
+/**
+ * @func EthGHSRate
+ * @description
+ 
+ const getEthGHSRate = async () => {
+  const rate = await bitmama.EthGHSRate()
+  return rate;
+}
+getEthGHSRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+*/
+
+/**
+ * @func
+ * @description 
+ * 
+const getEthBtcRate = async () => {
+  const rate = await bitmama.EthBtcRate()
+  return rate;
+};
+getEthBtcRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+ 
+ */
+
+  /**
+   * @func EthCeloRate
+   * @description eth to celo
+   * 
+const getEthCeloRate = async () => {
+  const rate = await bitmama.EthCeloRate();
+  return rate;
+}
+getEthCeloRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+   * @returns @number
+   */
+
+
+  
+/**
+ * @func EthXrpRate
+ * @description eth to xrp
+ 
+ const getEthXrpRate = async () => {
+  const rate = await bitmama.EthXrpRate()
+  return rate;
+}
+getEthXrpRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+ * @returns 
+ */
+
+
+/**
+ * @func EthXlmRate
+ * @description eth to xlm
+ * 
+ 
+ const getEthXlmRate = async () => {
+  const rate = await bitmama.EthXlmRate();
+  return rate;
+}
+getEthXlmRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+
+ */
+
+
+/**
+ * @func  EthCusdRate
+ * @description eth to cusd
+ * 
+const getEthCusdRate = async () => {
+  const rate = await bitmama.EthCusdRate()
+  return rate;
+}
+getEthCusdRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+ 
+ */
+
+  /**
+   * @func EthUsdtRate
+   * @description eth to usdt
+   * 
+const getEthUsdtRate = async () => {
+  const rate = await bitmama.EthUsdtRate()
+  return rate;
+}
+getEthUsdtRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+   
+   */
+
+  /**
+   * @func EthUsdcRate
+   * @description eth to usdc
+   * 
+   
+const getEthUsdcRate = async () => {
+  const rate = await bitmama.EthUsdcRate()
+  return rate;
+}
+getEthUsdcRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))   
+   
+   * @returns 
+   */
+
+// const getEthCeurRate = async () => {
+//   const rate = await bitmama.EthCeurRate()
+//   return rate;
+// }
+// const getEthUsdRate = async () => {
+//   const rate = await bitmama.EthUsdRate()
+//   return rate;
+// }
+// const getCeloNGNRate = async () => {
+//   const rate = await bitmama.CeloNGNRate()
+//   return rate;
+// }
+// const getCeloGHSRate = async () => {
+//   const rate = await bitmama.CeloGHSRate()
+//   return rate;
+// }
+// const getCeloUSDRate = async () => {
+//   const rate = await bitmama.CeloUSDRate()
+//   return rate;
+// }
+// const getCeloEthRate = async () => {
+//   const rate = await bitmama.CeloEthRate();
+//   return rate;
+// }
+// const getCeloBtcRate = async () => {
+//   const rate = await bitmama.CeloBtcRate()
+//   return rate;
+// }
+// const getCeloXrpRate = async () => {
+//   const rate = await bitmama.CeloXrpRate()
+//   return rate;
+// }
+// const getCeloXlmRate = async () => {
+//   const rate = await bitmama.CeloXlmRate()
+//   return rate;
+// }
+// const getCeloCusdRate = async () => {
+//   const rate = await bitmama.CeloCusdRate()
+//   return rate;
+// }
+// const getCeloCeurRate = async () => {
+//   const rate = await bitmama.CeloCeurRate()
+//   return rate;
+// }
+
+// const getCeloUsdtRate = async () => {
+//   const rate = await bitmama.CeloUsdtRate()
+//   return rate;
+// }
+// const getCeloUsdcRate = async () => {
+//   const rate = await bitmama.CeloUsdcRate()
+//   return rate;
+// }
+// const getXrpNGNRate = async () => {
+//   const rate = await bitmama.XrpNGNRate()
+//   return rate;
+// }
+
+// const getXrpGHSRate = async () => {
+//   const rate = await bitmama.XrpGHSRate()
+//   return rate;
+// }
+
+// const getXrpUSDRate = async () => {
+//   const rate = await bitmama.XrpUSDRate()
+//   return rate;
+// }
+// const getXrpBtcRate = async () => {
+//   const rate = await bitmama.XrpBtcRate()
+//   return rate;
+// }
+// const getXrpEthRate = async () => {
+//   const rate = await bitmama.XrpEthRate()
+//   return rate;
+// }
+// const getXrpXlmRate = async () => {
+//   const rate = await bitmama.XrpXlmRate()
+//   return rate;
+// }
+// const getXrpUsdtRate = async () => {
+//   const rate = await bitmama.XrpUsdtRate()
+//   return rate;
+// }
+
+// const getXrpUsdcRate = async () => {
+//   const rate = await bitmama.XrpUsdcRate()
+//   return rate;
+// }
+// const getXrpCusdRate = async () => {
+//   const rate = await bitmama.XrpCusdRate()
+//   return rate;
+// }
+// const getXrpCeurRate = async () => {
+//   const rate = await bitmama.XrpCeurRate()
+//   return rate;
+// }
+// const getXlmNGNRate = async () => {
+//   const rate = await bitmama.XlmNGNRate()
+//   return rate;
+// }
+// const getXlmGHSRate = async () => {
+//   const rate = await bitmama.XlmGHSRate()
+//   return rate;
+// }
+// const getXlmUSDRate = async () => {
+//   const rate = await bitmama.XlmUSDRate()
+//   return rate;
+// }
+// const getXlmBtcRate = async () => {
+//   const rate = await bitmama.XlmBtcRate()
+//   return rate;
+// }
+// const getXlmEthRate = async () => {
+//   const rate = await bitmama.XlmEthRate()
+//   return rate;
+// }
+
+// const getXlmXrpRate = async () => {
+//   const rate = await bitmama.XlmXrpRate()
+//   return rate;
+// }
+// const getXlmUsdtRate = async () => {
+//   const rate = await bitmama.XlmUsdtRate()
+//   return rate;
+// }
+// const getXlmUsdcRate = async () => {
+//   const rate = await bitmama.XlmUsdcRate()
+//   return rate;
+// }
+
+// const getXlmCusdRate = async () => {
+//   const rate = await bitmama.XlmCusdRate()
+//   return rate;
+// }
+// const getXlmCeurRate = async () => {
+//   const rate = await bitmama.XlmCeurRate()
+//   return rate;
+// }
+// const getUsdtNGNRate = async () => {
+//   const rate = await bitmama.UsdtNGNRate()
+//   return rate;
+// }
+// const getUsdtGHSRate = async () => {
+//   const rate = await bitmama.UsdtGHSRate()
+//   return rate;
+// }
+// const getUsdtUSDRate = async () => {
+//   const rate = await bitmama.UsdtUSDRate()
+//   return rate;
+// }
+// const getUsdtBtcRate = async () => {
+//   const rate = await bitmama.UsdtBtcRate()
+//   return rate;
+// }
+// const getUsdtEthRate = async () => {
+//   const rate = await bitmama.UsdtEthRate()
+//   return rate;
+// }
+// const getUsdtXrpRate = async () => {
+//   const rate = await bitmama.UsdtXrpRate()
+//   return rate;
+// }
+
+// const getUsdtXlmRate = async () => {
+//   const rate = await bitmama.UsdtXlmRate()
+//   return rate;
+// }
+// const getUsdtUsdcRate = async () => {
+//   const rate = await bitmama.UsdtUsdcRate()
+//   return rate;
+// }
+
+// const getUsdtCusdRate = async () => {
+//   const rate = await bitmama.UsdtCusdRate()
+//   return rate;
+// }
+// const getUsdtCeurRate = async () => {
+//   const rate = await bitmama.UsdtCeurRate()
+//   return rate;
+// }
+
+// const getUsdcNGNRate = async () => {
+//   const rate = await bitmama.UsdcNGNRate()
+//   return rate;
+// }
+
+// const getUsdcGHSRate = async () => {
+//   const rate = await bitmama.UsdcGHSRate()
+//   return rate;
+// }
+
+//   const getUsdcUSDRate = async () => {
+//     const rate = await bitmama.UsdcUSDRate()
+//     return rate;
+//   }
+//   const getUsdcBtcRate = async () => {
+//     const rate = await bitmama.UsdcBtcRate()
+//     return rate;
+//   }
+//   const getUsdcEthRate = async () => {
+//     const rate = await bitmama.UsdcEthRate()
+//     return rate;
+//   }
+//   const getUsdcXrpRate = async () => {
+//     const rate = await bitmama.UsdcXrpRate()
+//     return rate;
+//   }
+//   const getUsdcXlmRate = async () => {
+//     const rate = await bitmama.UsdcXlmRate()
+//     return rate();
+//   }
+//   const getUsdcCusdRate = async () => {
+//     const rate = await bitmama.UsdcCusdRate()
+//     return rate;
+//   }
+//   const getUsdcCeurRate = async () => {
+//     const rate = await bitmama.UsdcCeurRate()
+//     return rate;
+//   }
+//   const getCusdNGNRate = async () => {
+//     const rate = await bitmama.CusdNGNRate()
+//     return  rate
+//   }
+//   const getCusdGHSRate = async () => {
+//     const rate = await bitmama.CusdGHSRate()
+//     return rate;
+//   }
+//   const getCusdUSDRate = async () => {
+//     const rate = await bitmama.CusdUSDRate()
+//     return rate;
+//   }
+//   const getCusdBtcRate = async () => {
+//     const rate = await bitmama.CusdBtcRate()
+//     return rate;
+//   }
+//   const getCusdEthRate = async () => {
+//     const rate = await bitmama.CusdEthRate()
+//     return rate;
+//   }
+//   const getCusdXrpRate = async () => {
+//     const rate = await bitmama.CusdXrpRate()
+//     return rate;
+//   }
+//   const getCusdXlmRate = async () => {
+//     const rate = await bitmama.CusdXlmRate()
+//     return rate;
+//   }
+//   const getCusdUsdcRate = async () => {
+//     const rate = await bitmama.CusdUsdcRate()
+//     return rate;
+//   }
+//   const getCusdCeurRate = async () => {
+//     const rate = await bitmama.CusdCeurRate()
+//     return rate;
+//   }
+//   const getCeurNGNRate = async () => {
+//     const rate = await bitmama.CeurNGNRate()
+//     return rate;
+//   }
+//   const getCeurGHSRate = async () => {
+//     const rate = await bitmama.CeurGHSRate()
+//     return rate;
+//   }
+//   const getCeurUSDRate = async () => {
+//     const rate = await bitmama.CeurUSDRate()
+//     return rate;
+//   }
+//   const getCeurBtcRate = async () => {
+//     const rate = await bitmama.CeurBtcRate()
+//     return rate;
+//   }
+//   const getCeurEthRate = async () => {
+//     const rate = await bitmama.CeurEthRate()
+//     return rate;
+//   }
+//   const getCeurXrpRate = async () => {
+//     const rate = await bitmama.CeurXrpRate()
+//     return rate;
+//   }
+/**
+ * @func CeurXlmRate
+ * @description ceur to xlm
+ * 
+ 
+ */
+    const getCeurXlmRate = async () => {
+      const rate = await bitmama.CeurXlmRate()
+      return rate;
+    }
+    
+getCeurXlmRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+    
+
+/**
+ * @func CeurCusdRate
+ * @description ceur to cusd
+ * 
+const getCeurCusdRate = async () => {
+  const rate = await bitmama.CeurCusdRate()
+  return rate;
+}
+
+getCeurCusdRate()
+  .then(res => console.log(res))
+  .catch(e => console.log(e))
+ 
+ */

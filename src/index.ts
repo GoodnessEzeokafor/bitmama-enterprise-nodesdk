@@ -46,8 +46,8 @@ const obj = {
   enterpriseWallet: () => {
     return resources.wallet.wallets(obj.BASE_URL, obj.TOKEN);
   },
-  getRate: (ticker: Ticker) => {
-    return resources.rates.rates(obj.BASE_URL, obj.TOKEN,ticker);
+  getRate: async(ticker: Ticker) => {
+    return await resources.rates.rates(obj.BASE_URL, obj.TOKEN,ticker);
   },
   tickers: () => {
     return resources.rates.tickers();
@@ -90,7 +90,7 @@ const obj = {
   },
   // btc to cusd
   BtcCusdRate: () => {
-    return resources.rates.BtcCeloRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcCusdRate(obj.BASE_URL, obj.TOKEN);
   },
   // btc to ceur
   BtcCeurRate: () => {
@@ -130,7 +130,7 @@ const obj = {
   },
   // eth to xlm
   EthXlmRate:() => {
-    return resources.rates.EthXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthXlmRate(obj.BASE_URL, obj.TOKEN);
   },
   // eth to cusd
   EthCusdRate: () => {

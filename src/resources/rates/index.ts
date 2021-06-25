@@ -318,7 +318,7 @@ const rates = {
     return rate;
   },
   CeurXlmRate: async (url: string, token: string) => {
-    const rate: number = await cryptoRate(url, token, "ceur", "eth");
+    const rate: number = await cryptoRate(url, token, "ceur", "xlm");
     return rate;
   },
   CeurCusdRate: async (url: string, token: string) => {

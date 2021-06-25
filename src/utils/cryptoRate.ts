@@ -38,14 +38,12 @@ export const cryptoRate = async (url: string, token: string, source: Coin, desti
     if (isStableCoin(destination)){
       const baseDollarReq = await axiosLib.getRate(url, token, `${source}usd`);
       const baseRate: number = baseDollarReq['buy'];
-      console.log("BASE RATE",baseRate)
       return Promise.resolve(baseRate);
     }
     //source is an euro stable coin
     if (isEuroStableCoin(source)){
       const baseDollarReq = await axiosLib.getRate(url, token, `${destination}eur`);
       const baseRate: number = baseDollarReq['buy'];
-      console.log("BASE RATE",baseRate)
       return Promise.resolve(baseRate);
     }  
     // destination is an euro stable coin
