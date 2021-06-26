@@ -2,7 +2,7 @@
   "name": "bitmama-enterprise-nodesdk",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "directories": {
     "test": "test"
