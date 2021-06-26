@@ -5,7 +5,7 @@ This sdk can be used to create crypto wallet and receive crypto transactions
 ### Installation
 
 ```
-npm install sdk
+npm i bitmama-enterprise-nodesdk
 ```
 
 ### Usage
