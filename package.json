@@ -1,7 +1,8 @@
 {
   "name": "bitmama-enterprise-nodesdk",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "description": "",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "directories": {
     "test": "test"
@@ -9,7 +10,7 @@
   "scripts": {
     "test": "jest --config jest.config.ts",
     "test:coverage": "jest --coverage",
-    "build":"cd src && tsc",
+    "build": "cd src && tsc",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "start": "npm run build && node -r ./tsconfig-paths.js dist/index.js",
     "dev": "ts-node src/index.ts",
@@ -29,6 +30,9 @@
   "_moduleDirectories": [
     "src"
   ],
+  "_moduleAliases": {
+    "@modules": "dist/index.js"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.170",
@@ -37,7 +41,6 @@
     "jest": "^26.6.3",
     "ts-jest": "^26.5.5",
     "ts-node": "^10.0.0",
-    "tsconfig-paths": "^3.9.0",
     "tsd": "^0.17.0",
     "typescript": "^4.3.2"
   },
@@ -45,7 +48,8 @@
     "axios": "^0.21.1",
     "lodash": "^4.17.21",
     "module-alias": "^2.2.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "tsconfig-paths": "^3.9.0"
   },
   "publishConfig": {
     "access": "public"
