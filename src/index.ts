@@ -427,6 +427,7 @@ const obj = {
 }
 const initialization = obj.init
 const BitmamaEnterprise = initialization.bind(obj)
+
 export default BitmamaEnterprise
 
 

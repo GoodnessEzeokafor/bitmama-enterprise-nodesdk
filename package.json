@@ -12,7 +12,7 @@
     "test:coverage": "jest --coverage",
     "build":"cd src && tsc",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
-    "start": "npm run build && node  dist/index.js",
+    "start": "npm run build && node -r ./tsconfig-paths.js dist/index.js",
     "dev": "ts-node src/index.ts",
     "prepublish": "npm run build"
   },
