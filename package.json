@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
+  "types": "dist/types/index.d.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "jest --config jest.config.ts",
     "test:coverage": "jest --coverage",
+    "build":"cd src && tsc",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "start": "npm run build && node  dist/index.js",
     "dev": "ts-node src/index.ts",
-    "example":"ts-node src/examples/Basic/rate.ts"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
