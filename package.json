@@ -47,5 +47,8 @@
     "lodash": "^4.17.21",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
