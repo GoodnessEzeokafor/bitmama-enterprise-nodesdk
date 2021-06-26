@@ -1,8 +1,8 @@
 {
   "name": "bitmama-enterprise-nodesdk",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
-  "main": "dist/index.js",
+  "main": "-r ./tsconfig-paths.js dist/index.js",
   "types": "dist/types/index.d.ts",
   "directories": {
     "test": "test"
