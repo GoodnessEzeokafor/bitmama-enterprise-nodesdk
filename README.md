@@ -12,24 +12,22 @@ npm i bitmama-enterprise-nodesdk
 
 ```js
 // Require the library
-const enterprise = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
+const enterprise = require("bitmama-enterprise-nodesdk").Enterprise
 ```
 
 #### Making calls to the resources
 
 ```js
-const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
-bitmama.listBanks(countryCode)
-  .then((res: any) => console.log(res))
+const enterprise = require("bitmama-enterprise-nodesdk").Enterprise
+const bitmama = enterprise.initialize(TOKEN, ENV)
+const rate= "ethghs";
+bitmama.getRate(rate)
+  .then((res) => console.log(res))
+  .catch((e) => console.log(e))
+
   .catch((e: any) => console.log(e));
 ```
-```js
-const call = async(param) => {
-  const data = await bitmama.createCryptoWallet(param);
-  console.log(data);
-  return
-}
-```
+
 
 
 ### Resources
