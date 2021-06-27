@@ -1,10 +1,10 @@
-import {obj} from "../../index";
+import {Enterprise} from "../../index";
 import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mockBankResolveResponse, mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker, mockTickers } from "../setup";
 
 describe("Test case for sdk", () => {
   let bitmama: any;
   beforeEach(() => {
-    bitmama = obj.initialize(mockTestToken, "dev");
+    bitmama = Enterprise.initialize(mockTestToken, "dev");
   });  
   afterEach(() => {
     jest.resetAllMocks();

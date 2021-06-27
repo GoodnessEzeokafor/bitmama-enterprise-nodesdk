@@ -4,7 +4,7 @@
 
 
 import {  BankResolveParam } from "../types";
-import {obj} from "../index"
+import {Enterprise} from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 
 
@@ -15,7 +15,7 @@ const param: BankResolveParam = {
     "bankCode": "058"
 }
 // setup credentials
-const bitmama = obj.initialize(TEST_API_TOKEN, TEST_ENV);
+const bitmama = Enterprise.initialize(TEST_API_TOKEN, TEST_ENV);
 bitmama.resolveBankAccount(param)
   .then((res: any) => console.log(res))
   .catch((e: any) => console.log(e))

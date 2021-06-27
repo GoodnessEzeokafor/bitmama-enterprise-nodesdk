@@ -15,9 +15,8 @@ import { BankCountryCode, BankResolveParam, Coin, CreateWalletParam, Environment
  */
 const STAGING_URL: string = "https://enterprise-api-staging.bitmama.io/v1";
 const PRODUCTION_URL: string = "https://enterprise-api.bitmama.io/v1";
-// const obj = () 
-export const obj = {
-  resources: resources,
+// const Enterprise = () 
+export const Enterprise = {
   TOKEN: '',
   ENV: '',
   BASE_URL:'',
@@ -28,406 +27,406 @@ export const obj = {
       if (typeof TOKEN !== "string") throw new Error(`${TOKEN} should be a string`);
       if (typeof ENV !== "string") throw new Error(`${ENV} should be a string`);
       if (!isInEnvList) throw new Error(`${ENV} should either be a dev or prod`);
-      obj.BASE_URL = ENV === "prod" || ENV === "production" ? PRODUCTION_URL : STAGING_URL;
+      Enterprise.BASE_URL = ENV === "prod" || ENV === "production" ? PRODUCTION_URL : STAGING_URL;
       // set values
-      obj.TOKEN = TOKEN;
-      obj.ENV = ENV;
-      return obj;
+      Enterprise.TOKEN = TOKEN;
+      Enterprise.ENV = ENV;
+      return Enterprise;
     } catch (e: any | Error | unknown) {
       throw e.message;
     }
   },
   createCryptoWallet: async(param:CreateWalletParam) => {
-    const res = await resources.wallet.create(obj.BASE_URL, obj.TOKEN, param);
+    const res = await resources.wallet.create(Enterprise.BASE_URL, Enterprise.TOKEN, param);
     return res;
   },
   listCryptoWallet: async(coin:Coin,pagination:Pagination) => {
-    return resources.wallet.get(obj.BASE_URL, obj.TOKEN, coin, pagination);
+    return resources.wallet.get(Enterprise.BASE_URL, Enterprise.TOKEN, coin, pagination);
   },
   enterpriseWallet: () => {
-    return resources.wallet.wallets(obj.BASE_URL, obj.TOKEN);
+    return resources.wallet.wallets(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   getRate: async(ticker: Ticker) => {
-    return await resources.rates.rates(obj.BASE_URL, obj.TOKEN,ticker);
+    return await resources.rates.rates(Enterprise.BASE_URL, Enterprise.TOKEN,ticker);
   },
   tickers: () => {
     return resources.rates.tickers();
   },
   createWebhook: (endpoint: string) => {
-    return resources.webhooks.create(obj.BASE_URL, obj.TOKEN, endpoint);
+    return resources.webhooks.create(Enterprise.BASE_URL, Enterprise.TOKEN, endpoint);
   },
   getWebhook: () => {
-    return resources.webhooks.get(obj.BASE_URL, obj.TOKEN);
+    return resources.webhooks.get(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   listBanks: (countryCode:BankCountryCode) => {
-    return resources.banks.list(obj.BASE_URL, obj.TOKEN,countryCode);
+    return resources.banks.list(Enterprise.BASE_URL, Enterprise.TOKEN,countryCode);
   },
   resolveBankAccount: (param:BankResolveParam) => {
-    return resources.banks.resolve(obj.BASE_URL, obj.TOKEN, param);
+    return resources.banks.resolve(Enterprise.BASE_URL, Enterprise.TOKEN, param);
   },
   // btc to eth rate
   BtcEthRate: () => {
-    return resources.rates.BtcEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to usdt
   BtcUsdtRate: () => {
-    return resources.rates.BtcUsdtRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcUsdtRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to usdc
   BtcUsdcRate: () => {
-    return resources.rates.BtcUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to xrp
   BtcXrpRate: () => {
-    return resources.rates.BtcXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to xlm
   BtcXlmRate: () => {
-    return resources.rates.BtcXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to celo rate
   BtcCeloRate: () => {
-    return resources.rates.BtcCeloRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcCeloRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to cusd
   BtcCusdRate: () => {
-    return resources.rates.BtcCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to ceur
   BtcCeurRate: () => {
-    return resources.rates.BtcCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to ngn
   BtcNGNRate: () => {
-    return resources.rates.BtcNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   //btc to ghs
   BtcGHSRate:() => {
-    return resources.rates.BtcGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // btc to usd
   BtcUsdRate: () => {
-    return resources.rates.BtcUsdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.BtcUsdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to ngn
   EthNGNRate: () => {
-    return resources.rates.EthNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to ghs
   EthGHSRate:() => {
-    return resources.rates.EthGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to btc
   EthBtcRate: () => {
-    return resources.rates.EthBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to celo
   EthCeloRate: () => {
-    return resources.rates.EthCeloRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthCeloRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to xrp 
   EthXrpRate: () => {
-    return resources.rates.EthXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to xlm
   EthXlmRate:() => {
-    return resources.rates.EthXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to cusd
   EthCusdRate: () => {
-    return resources.rates.EthCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to usdt
   EthUsdtRate: () => {
-    return resources.rates.EthUsdtRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthUsdtRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to usdc
   EthUsdcRate: () => {
-    return resources.rates.EthUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to ceur
   EthCeurRate: () => {
-    return resources.rates.EthCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // eth to usd
   EthUsdRate: () => {
-    return resources.rates.EthUsdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.EthUsdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to ngn
   CeloNGNRate: () => {
-    return resources.rates.CeloNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to ghs
   CeloGHSRate: () => {
-    return resources.rates.CeloGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to usd
   CeloUSDRate: () => {
-    return resources.rates.CeloUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to eth
   CeloEthRate: () => {
-    return resources.rates.CeloEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to btc 
   CeloBtcRate: () => {
-    return resources.rates.CeloBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to xrp
   CeloXrpRate: () => {
-    return resources.rates.CeloXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to xlm
   CeloXlmRate: () => {
-    return resources.rates.CeloXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to cusd
   CeloCusdRate: () => {
-    return resources.rates.CeloCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to ceur
   CeloCeurRate: () => {
-    return resources.rates.CeloCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to usdt
   CeloUsdtRate: () => {
-    return resources.rates.CeloUsdtRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloUsdtRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // celo to usdc
   CeloUsdcRate: () => {
-    return resources.rates.CeloUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeloUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 
   // xrp to ngn
   XrpNGNRate: () => {
-    return resources.rates.XrpNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to ghs
   XrpGHSRate: () => {
-    return resources.rates.XrpGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to usd
   XrpUSDRate: () => {
-    return resources.rates.XrpUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to btc
   XrpBtcRate: () => {
-    return resources.rates.XrpBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to eth
   XrpEthRate: () => {
-    return resources.rates.XrpEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to xlm
   XrpXlmRate: () => {
-    return resources.rates.XrpXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to usdt
   XrpUsdtRate: () => {
-    return resources.rates.XrpUsdtRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpUsdtRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to usdc
   XrpUsdcRate: () => {
-    return resources.rates.XrpUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to cusd
   XrpCusdRate: () => {
-    return resources.rates.XrpCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xrp to ceur
   XrpCeurRate: () => {
-    return resources.rates.XrpCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XrpCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to ngn
   XlmNGNRate: () => {
-    return resources.rates.XlmNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to ghs
   XlmGHSRate: () => {
-    return resources.rates.XlmGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to usd
   XlmUSDRate: () => {
-    return resources.rates.XlmUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to btc
   XlmBtcRate: () => {
-    return resources.rates.XlmBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to eth
   XlmEthRate: () => {
-    return resources.rates.XlmEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to xrp
   XlmXrpRate: () => {
-    return resources.rates.XlmXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to usdt
   XlmUsdtRate: () => {
-    return resources.rates.XlmUsdtRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmUsdtRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to usdc
   XlmUsdcRate: () => {
-    return resources.rates.XlmUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to cusd
   XlmCusdRate: () => {
-    return resources.rates.XlmCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // xlm to ceur
   XlmCeurRate: () => {
-    return resources.rates.XlmCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.XlmCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 
 
   // usdt to ngn
   UsdtNGNRate: () => {
-    return resources.rates.UsdtNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to ghs
   UsdtGHSRate: () => {
-    return resources.rates.UsdtGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to usd
   UsdtUSDRate: () => {
-    return resources.rates.UsdtUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to btc
   UsdtBtcRate: () => {
-    return resources.rates.UsdtBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to eth
   UsdtEthRate: () => {
-    return resources.rates.UsdtEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to xrp
   UsdtXrpRate: () => {
-    return resources.rates.UsdtXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to xlm
   UsdtXlmRate: () => {
-    return resources.rates.UsdtXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to usdc
   UsdtUsdcRate: () => {
-    return resources.rates.UsdtUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to cusd
   UsdtCusdRate: () => {
-    return resources.rates.UsdtCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdt to ceur
   UsdtCeurRate: () => {
-    return resources.rates.UsdtCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdtCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 // usdc to ngn
   UsdcNGNRate: () => {
-    return resources.rates.UsdcNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to ghs
   UsdcGHSRate: () => {
-    return resources.rates.UsdcGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to usd
   UsdcUSDRate: () => {
-    return resources.rates.UsdcUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to btc
   UsdcBtcRate: () => {
-    return resources.rates.UsdcBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to eth
   UsdcEthRate: () => {
-    return resources.rates.UsdcEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to xrp
   UsdcXrpRate: () => {
-    return resources.rates.UsdcXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to xlm
   UsdcXlmRate: () => {
-    return resources.rates.UsdcXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to cusd
   UsdcCusdRate: () => {
-    return resources.rates.UsdcCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to ceur
   UsdcCeurRate: () => {
-    return resources.rates.UsdcCeurRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.UsdcCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to ngn
   CusdNGNRate: () => {
-    return resources.rates.CusdNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CusdNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to ghs
   CusdGHSRate: () => {
-    return resources.rates.CusdGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CusdGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to usd
   CusdUSDRate: async() => {
-    return await resources.rates.CusdUSDRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to btc
   CusdBtcRate: async() => {
-    return await resources.rates.CusdBtcRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to eth
   CusdEthRate: async() => {
-    return await resources.rates.CusdEthRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to xrp
   CusdXrpRate: async() => {
-    return await resources.rates.CusdXrpRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to xlm
   CusdXlmRate: async() => {
-    return await resources.rates.CusdXlmRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // usdc to cusd
   CusdUsdcRate: async() => {
-    return await resources.rates.CusdUsdcRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdUsdcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // cusd to ceur
   CusdCeurRate: async() => {
-    return await resources.rates.CusdCeurRate(obj.BASE_URL, obj.TOKEN);
+    return await resources.rates.CusdCeurRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 
   // ceur to ngn
   CeurNGNRate: () => {
-    return resources.rates.CeurNGNRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurNGNRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to ghs
   CeurGHSRate: () => {
-    return resources.rates.CeurGHSRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurGHSRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to usd
   CeurUSDRate: () => {
-    return resources.rates.CeurUSDRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurUSDRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to btc
   CeurBtcRate: () => {
-    return resources.rates.CeurBtcRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurBtcRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to eth
   CeurEthRate: () => {
-    return resources.rates.CeurEthRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurEthRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to xrp
   CeurXrpRate: () => {
-    return resources.rates.CeurXrpRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurXrpRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to xlm
   CeurXlmRate: () => {
-    return resources.rates.CeurXlmRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurXlmRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
   // ceur to cusd
   CeurCusdRate: () => {
-    return resources.rates.CeurCusdRate(obj.BASE_URL, obj.TOKEN);
+    return resources.rates.CeurCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 }
-// const initialization = obj.init
-// const BitmamaEnterprise = initialization.bind(obj)
+// const initialization = Enterprise.init
+// const BitmamaEnterprise = initialization.bind(Enterprise)
 
 
 

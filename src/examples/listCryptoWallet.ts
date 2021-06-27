@@ -4,7 +4,7 @@
 
 
 import { Coin, Pagination } from "../types";
-import {obj} from "../index"
+import {Enterprise} from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 
 
@@ -15,7 +15,7 @@ const pagination: Pagination = {
 };
 
 // setup credentials
-const bitmama = obj.initialize(TEST_API_TOKEN, TEST_ENV);
+const bitmama = Enterprise.initialize(TEST_API_TOKEN, TEST_ENV);
 const call = async (cn: Coin, pagin: Pagination) => {
   const data = await bitmama.listCryptoWallet(cn, pagin);
   console.log(data);
