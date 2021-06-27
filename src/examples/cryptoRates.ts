@@ -4,14 +4,14 @@
 
 
 // import {Ticker } from "types";
-import BitmamaEnterprise from "../index"
+import {obj} from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 
 
 
 // const rate: Ticker = "ethghs";
 // setup credentials
-const bitmama = BitmamaEnterprise.initialize(TEST_API_TOKEN, TEST_ENV);
+const bitmama = obj.initialize(TEST_API_TOKEN, TEST_ENV);
 
 // implementation 1
 // bitmama.BtcCusdRate()

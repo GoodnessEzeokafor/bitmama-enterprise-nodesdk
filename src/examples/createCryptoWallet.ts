@@ -3,7 +3,7 @@
 */
 
 import { Coin, CreateWalletParam } from "../types";
-import BitmamaEnterprise from "../index"
+import {obj} from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 
 const label: string = "test label";
@@ -11,7 +11,7 @@ const coin: Coin = "celo";
 const param: CreateWalletParam = { label, coin };
 
 // setup credentials
-const bitmama = BitmamaEnterprise.initialize(TEST_API_TOKEN, TEST_ENV);
+const bitmama = obj.initialize(TEST_API_TOKEN, TEST_ENV);
 const call = async(pram:CreateWalletParam) => {
   const data = await bitmama.createCryptoWallet(pram);
   console.log(data);
