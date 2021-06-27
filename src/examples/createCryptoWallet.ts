@@ -2,7 +2,7 @@
  *  Create crypto wallet using sdk
 */
 
-import { Coin, CreateWalletParam } from "types";
+import { Coin, CreateWalletParam } from "../types";
 import BitmamaEnterprise from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 

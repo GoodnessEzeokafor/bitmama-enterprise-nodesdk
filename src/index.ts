@@ -1,6 +1,6 @@
-import 'module-alias/register';
-import "reflect-metadata";
-import resources from "resources/index"
+// import 'module-alias/register';
+// import "reflect-metadata";
+import resources from "./resources/index"
 import { BankCountryCode, BankResolveParam, Coin, CreateWalletParam, Environment, Pagination, Ticker } from 'types';
 /**
  * 

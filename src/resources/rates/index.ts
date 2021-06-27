@@ -1,6 +1,6 @@
-import { Ticker } from "types";
-import axiosLib from "utils/axios";
-import { cryptoRate } from "utils/cryptoRate";
+import { Ticker } from "../../types";
+import axiosLib from "../../utils/axios";
+import { cryptoRate } from "../../utils/cryptoRate";
 
 // const root = "/address"
 const rates = {

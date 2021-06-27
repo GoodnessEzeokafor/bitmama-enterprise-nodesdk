@@ -3,7 +3,7 @@
 */
 
 
-import { Coin, Pagination } from "types";
+import { Coin, Pagination } from "../types";
 import BitmamaEnterprise from "../index"
 import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 

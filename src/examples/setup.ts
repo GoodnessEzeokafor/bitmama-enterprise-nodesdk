@@ -1,4 +1,4 @@
-import { Environment } from "types";
+import { Environment } from "../types";
 
 export const TEST_API_TOKEN: string = "3ee3701e057b26c6b55d0bee2";
 export const TEST_ENV: Environment = "dev";

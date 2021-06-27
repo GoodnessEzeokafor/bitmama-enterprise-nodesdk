@@ -1,5 +1,5 @@
-import { BankCountryCode, BankResolveParam } from "types";
-import axiosLib from "utils/axios";
+import { BankCountryCode, BankResolveParam } from "../../types";
+import axiosLib from "../../utils/axios";
 
 const banks = {
   list: async(url:string, token:string, countryCode:BankCountryCode) => {

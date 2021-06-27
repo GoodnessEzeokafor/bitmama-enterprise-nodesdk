@@ -1,7 +1,7 @@
 /** Mock Test
  * https://jestjs.io/docs/mock-functions
  */
-import client from "utils/axios";
+import client from "../../utils/axios";
 import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mockBankResolveResponse, mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker } from "../setup";
 jest.mock("axios");
 describe("mock test case for utils/axios.ts", () => {

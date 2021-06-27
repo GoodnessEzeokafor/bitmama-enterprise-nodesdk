@@ -1,5 +1,5 @@
 import axios from "axios"
-import { BankCountryCode, BankResolveParam, Coin, Pagination } from "types";
+import { BankCountryCode, BankResolveParam, Coin, Pagination } from "../types";
 import { errorResponse } from "./error";
 const axiosLib = {
   client: async (url: string, token: string) => {

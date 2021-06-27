@@ -1,4 +1,4 @@
-import { Coin, CreateWalletParam, Pagination, Ticker } from "types"
+import { Coin, CreateWalletParam, Pagination, Ticker } from "../types"
 
 // mock test base url
 export const mockTestBaseUrl = "https://enterprise-api-staging.bitmama.io/v1";

@@ -1,4 +1,4 @@
-import axiosLib from "utils/axios";
+import axiosLib from "../../utils/axios";
 
 const webhooks = {
   create: async(url:string, token:string, endpoint:string) => {

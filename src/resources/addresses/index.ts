@@ -1,6 +1,6 @@
-import { Coin, CreateWalletParam, Environment, Pagination } from "types"
-import axiosLib from "utils/axios"
-import { checkEnv } from "utils/checkEnv";
+import { Coin, CreateWalletParam, Environment, Pagination } from "../../types"
+import axiosLib from "../../utils/axios"
+import { checkEnv } from "../../utils/checkEnv";
 
 
 const wallet = {

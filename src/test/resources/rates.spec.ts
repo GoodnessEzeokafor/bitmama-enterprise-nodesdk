@@ -1,5 +1,5 @@
-import rates from "resources/rates"
-import { mockTestBaseUrl, mockTestToken } from "test/setup";
+import rates from "../../resources/rates"
+import { mockTestBaseUrl, mockTestToken } from "../setup";
 import { Ticker } from "types";
 
 

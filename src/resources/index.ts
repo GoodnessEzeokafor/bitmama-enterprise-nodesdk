@@ -1,6 +1,6 @@
-import wallet from "resources/addresses";
-import rates from "resources/rates";
-import webhooks from "resources/webhooks";
-import banks from "resources/banks"
+import wallet from "./addresses";
+import rates from "./rates";
+import webhooks from "./webhooks";
+import banks from "./banks"
 const resources = { wallet, rates, webhooks, banks };
 export default resources;

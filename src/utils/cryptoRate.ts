@@ -1,6 +1,6 @@
 import { Coin } from "types";
 import { round } from 'lodash';
-import axiosLib from "utils/axios";
+import axiosLib from "./axios";
 
 export const isStableCoin = (coin: Coin): boolean => {
   const coins: Coin[] = ['usdt', 'usdc', 'busd', 'dai', 'ust', 'pax', 'husd', 'tusd', 'jst', 'usdn', 'usdt-tron', 'cusd', 'husd', 'gusd', 'usd'];

@@ -1,6 +1,6 @@
-import { mockTestBaseUrl, mockTestToken } from "test/setup";
-import { Coin } from "types";
-import { cryptoRate, isEuroStableCoin, isStableCoin } from "utils/cryptoRate";
+import { mockTestBaseUrl, mockTestToken } from "../setup";
+import { Coin } from "../../types";
+import { cryptoRate, isEuroStableCoin, isStableCoin } from "../../utils/cryptoRate";
 
 describe("mock test case for utils/axios.ts", () => {
   let dollarStableCoin: Coin;
