@@ -11,7 +11,7 @@ import { TEST_API_TOKEN, TEST_ENV } from "./setup";
 
 // const rate: Ticker = "ethghs";
 // setup credentials
-const bitmama = BitmamaEnterprise(TEST_API_TOKEN, TEST_ENV);
+const bitmama = BitmamaEnterprise.initialize(TEST_API_TOKEN, TEST_ENV);
 
 // implementation 1
 // bitmama.BtcCusdRate()

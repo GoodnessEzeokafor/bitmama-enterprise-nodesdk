@@ -15,12 +15,13 @@ import { BankCountryCode, BankResolveParam, Coin, CreateWalletParam, Environment
  */
 const STAGING_URL: string = "https://enterprise-api-staging.bitmama.io/v1";
 const PRODUCTION_URL: string = "https://enterprise-api.bitmama.io/v1";
+// const obj = () 
 const obj = {
   resources: resources,
   TOKEN: '',
   ENV: '',
   BASE_URL:'',
-  init: (TOKEN: string, ENV: Environment): any => {
+  initialize: (TOKEN: string, ENV: Environment): any => {
     try {
       const envList: string[] = ['prod', 'production', 'dev', 'development'];
       const isInEnvList = envList.includes(String(ENV).trim());
@@ -425,9 +426,9 @@ const obj = {
     return resources.rates.CeurCusdRate(obj.BASE_URL, obj.TOKEN);
   },
 }
-const initialization = obj.init
-const BitmamaEnterprise = initialization.bind(obj)
+// const initialization = obj.init
+// const BitmamaEnterprise = initialization.bind(obj)
 
-export default BitmamaEnterprise
+export default obj
 
 

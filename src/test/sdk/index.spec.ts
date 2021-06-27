@@ -4,7 +4,7 @@ import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mock
 describe("Test case for sdk", () => {
   let bitmama: any;
   beforeEach(() => {
-    bitmama = BitmamaEnterprise(mockTestToken, "dev");
+    bitmama = BitmamaEnterprise.initialize(mockTestToken, "dev");
   });  
   afterEach(() => {
     jest.resetAllMocks();
