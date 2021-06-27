@@ -16,7 +16,7 @@ import { BankCountryCode, BankResolveParam, Coin, CreateWalletParam, Environment
 const STAGING_URL: string = "https://enterprise-api-staging.bitmama.io/v1";
 const PRODUCTION_URL: string = "https://enterprise-api.bitmama.io/v1";
 // const obj = () 
-const obj = {
+export const obj = {
   resources: resources,
   TOKEN: '',
   ENV: '',
@@ -429,6 +429,5 @@ const obj = {
 // const initialization = obj.init
 // const BitmamaEnterprise = initialization.bind(obj)
 
-export default obj
 
 
