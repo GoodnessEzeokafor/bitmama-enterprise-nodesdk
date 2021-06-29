@@ -37,8 +37,22 @@ export const Enterprise = {
     }
   },
   createCryptoWallet: async(param:CreateWalletParam) => {
-    const res = await resources.wallet.create(Enterprise.BASE_URL, Enterprise.TOKEN, param);
-    return res;
+    return await resources.wallet.create(Enterprise.BASE_URL, Enterprise.TOKEN, param);
+  },
+  createCeloWallet: async (label: string) => {
+    return await resources.wallet.createCeloWallet(Enterprise.BASE_URL, Enterprise.TOKEN, label);
+  },
+  createBtcWallet: async (label: string) => {
+    return await resources.wallet.createBtcWallet(Enterprise.BASE_URL, Enterprise.TOKEN, label, Enterprise.ENV as Environment);
+  },
+  createEthWallet: async (label: string) => {
+    return await resources.wallet.createEthWallet(Enterprise.BASE_URL, Enterprise.TOKEN, label, Enterprise.ENV as Environment);
+  },
+  createRippleWallet: async (label: string) => {
+    return await resources.wallet.createRippleWallet(Enterprise.BASE_URL, Enterprise.TOKEN,label);
+  },
+  createStellarWallet: async (label: string) => {
+    return await resources.wallet.createStellarWallet(Enterprise.BASE_URL, Enterprise.TOKEN,label);
   },
   listCryptoWallet: async(coin:Coin,pagination:Pagination) => {
     return resources.wallet.get(Enterprise.BASE_URL, Enterprise.TOKEN, coin, pagination);
