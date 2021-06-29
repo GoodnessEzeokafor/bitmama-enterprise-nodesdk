@@ -1,7 +1,7 @@
 ## Bitmama Enterprse ![Build status](https://travis-ci.com/GoodnessEzeokafor/bitmama-enterprise-nodesdk.svg?branch=main)
 
 Nodejs API wrapper for [Bitmama Enterprise](https://bitmama.io/).
-This sdk can be used to create crypto wallet and receive crypto transactions
+This SDK can be used to create a crypto wallet and receive crypto transactions
 ### Installation
 
 ```
@@ -25,124 +25,6 @@ bitmama.getRate(rate)
   .then((res) => console.log(res))
   .catch((e) => console.log(e))
 ```
-
-
-
-### Resources
-
-- banks
-  - list
-  - resolve
-- wallets
-  - create
-    - .createCryptoWallet(param)
-    - .createCeloWallet(label)
-    - .createBtcWallet(label)
-    - .createEthWallet(label)
-    - .createRippleWallet(label)
-    - .createStellarWallet(label)
-  - list
-- webhooks
-  - create
-  - get
-- rate
-  - get
-    - getRate(ticker)
-    - BtcEthRate()
-    - BtcUsdtRate()
-    - BtcUsdcRate()
-    - BtcXrpRate()
-    - BtcXlmRate()
-    - BtcCeloRate()
-    - BtcCusdRate()
-    - BtcCeurRate()
-    - BtcNGNRate()
-    - BtcGHSRate()
-    - BtcUsdRate()
-    - EthNGNRate()
-    - EthGHSRate()
-    - EthBtcRate()
-    - EthCeloRate()
-    - EthXrpRate()
-    - EthXlmRate()
-    - EthCusdRate()
-    - EthUsdtRate()
-    - EthUsdcRate()
-    - EthCeurRate()
-    - EthUsdRate()
-    - CeloNGNRate()
-    - CeloGHSRate()
-    - CeloUSDRate()
-    - CeloEthRate()
-    - CeloBtcRate()
-    - CeloXrpRate()
-    - CeloXlmRate()
-    - CeloCusdRate()
-    - CeloCeurRate()
-    - CeloUsdtRate()
-    - CeloUsdcRate()
-    - XrpNGNRate()
-    - XrpGHSRate()
-    - XrpUSDRate()
-    - XrpBtcRate: ()
-    - XrpEthRate()
-    - XrpXlmRate()
-    - XrpUsdtRate()
-    - XrpUsdcRate()
-    - XrpCusdRate()
-    - XrpCeurRate()
-    - XlmNGNRate()
-    - XlmGHSRate()
-    - XlmUSDRate()
-    - XlmBtcRate()
-    - XlmEthRate()
-    - XlmXrpRate()
-    - XlmUsdtRate()
-    - XlmUsdcRate()
-    - XlmCusdRate()
-    - XlmCeurRate()
-    - UsdtNGNRate()
-    - UsdtGHSRate()
-    - UsdtUSDRate()
-    - UsdtBtcRate()
-    - UsdtEthRate()
-    - UsdtXrpRate()
-    - UsdtXlmRate()
-    - UsdtUsdcRate()
-    - UsdtCusdRate()
-    - UsdtCeurRate()
-    - UsdcNGNRate()
-    - UsdcGHSRate()
-    - UsdcUSDRate()
-    - UsdcBtcRate()
-    - UsdcEthRate()
-    - UsdcXrpRate()
-    - UsdcXlmRate()
-    - UsdcCusdRate()
-    - UsdcCeurRate()
-    - CusdNGNRate()
-    - CusdGHSRate()
-    - CusdUSDRate()     
-    - CusdBtcRate()
-    - CusdEthRate()
-    - CusdXrpRate()
-    - CusdXlmRate()
-    - CusdUsdcRate()
-    - CusdCeurRate()
-    - CeurNGNRate()
-    - CeurGHSRate()
-    - CeurUSDRate()
-    - CeurBtcRate()
-    - CeurEthRate()
-    - CeurXrpRate()
-    - CeurXlmRate()
-    - CeurCusdRate()
-
-  - tickers
-
-### Contributing
-- 
-
 ### Examples
 ## create crypto wallet
 
@@ -472,3 +354,126 @@ getBtcGHSRate()
   .catch((e) => console.log(e))
 
 ```
+## Tickers
+```js
+bitmama.tickers()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((e) => console.log(e)); 
+```
+
+
+
+### Resources
+
+- banks
+  - list
+  - resolve
+- wallets
+  - create
+    - .createCryptoWallet(param)
+    - .createCeloWallet(label)
+    - .createBtcWallet(label)
+    - .createEthWallet(label)
+    - .createRippleWallet(label)
+    - .createStellarWallet(label)
+  - list
+- webhooks
+  - create
+  - get
+- rate
+  - get
+    - getRate(ticker)
+    - BtcEthRate()
+    - BtcUsdtRate()
+    - BtcUsdcRate()
+    - BtcXrpRate()
+    - BtcXlmRate()
+    - BtcCeloRate()
+    - BtcCusdRate()
+    - BtcCeurRate()
+    - BtcNGNRate()
+    - BtcGHSRate()
+    - BtcUsdRate()
+    - EthNGNRate()
+    - EthGHSRate()
+    - EthBtcRate()
+    - EthCeloRate()
+    - EthXrpRate()
+    - EthXlmRate()
+    - EthCusdRate()
+    - EthUsdtRate()
+    - EthUsdcRate()
+    - EthCeurRate()
+    - EthUsdRate()
+    - CeloNGNRate()
+    - CeloGHSRate()
+    - CeloUSDRate()
+    - CeloEthRate()
+    - CeloBtcRate()
+    - CeloXrpRate()
+    - CeloXlmRate()
+    - CeloCusdRate()
+    - CeloCeurRate()
+    - CeloUsdtRate()
+    - CeloUsdcRate()
+    - XrpNGNRate()
+    - XrpGHSRate()
+    - XrpUSDRate()
+    - XrpBtcRate: ()
+    - XrpEthRate()
+    - XrpXlmRate()
+    - XrpUsdtRate()
+    - XrpUsdcRate()
+    - XrpCusdRate()
+    - XrpCeurRate()
+    - XlmNGNRate()
+    - XlmGHSRate()
+    - XlmUSDRate()
+    - XlmBtcRate()
+    - XlmEthRate()
+    - XlmXrpRate()
+    - XlmUsdtRate()
+    - XlmUsdcRate()
+    - XlmCusdRate()
+    - XlmCeurRate()
+    - UsdtNGNRate()
+    - UsdtGHSRate()
+    - UsdtUSDRate()
+    - UsdtBtcRate()
+    - UsdtEthRate()
+    - UsdtXrpRate()
+    - UsdtXlmRate()
+    - UsdtUsdcRate()
+    - UsdtCusdRate()
+    - UsdtCeurRate()
+    - UsdcNGNRate()
+    - UsdcGHSRate()
+    - UsdcUSDRate()
+    - UsdcBtcRate()
+    - UsdcEthRate()
+    - UsdcXrpRate()
+    - UsdcXlmRate()
+    - UsdcCusdRate()
+    - UsdcCeurRate()
+    - CusdNGNRate()
+    - CusdGHSRate()
+    - CusdUSDRate()     
+    - CusdBtcRate()
+    - CusdEthRate()
+    - CusdXrpRate()
+    - CusdXlmRate()
+    - CusdUsdcRate()
+    - CusdCeurRate()
+    - CeurNGNRate()
+    - CeurGHSRate()
+    - CeurUSDRate()
+    - CeurBtcRate()
+    - CeurEthRate()
+    - CeurXrpRate()
+    - CeurXlmRate()
+    - CeurCusdRate()
+
+  - tickers
+   - tickers()
