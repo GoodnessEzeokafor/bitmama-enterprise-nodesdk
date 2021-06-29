@@ -139,6 +139,7 @@ bitmama.getRate(rate)
     - CeurCusdRate()
 
   - tickers
+   - tickers()
 
 ### Contributing
 - 
@@ -471,4 +472,12 @@ getBtcGHSRate()
   .then((res) => console.log(res))
   .catch((e) => console.log(e))
 
+```
+## Tickers
+```js
+bitmama.tickers()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((e) => console.log(e)); 
 ```
