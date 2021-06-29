@@ -439,8 +439,5 @@ export const Enterprise = {
     return resources.rates.CeurCusdRate(Enterprise.BASE_URL, Enterprise.TOKEN);
   },
 }
-// const initialization = Enterprise.init
-// const BitmamaEnterprise = initialization.bind(Enterprise)
-
 
 

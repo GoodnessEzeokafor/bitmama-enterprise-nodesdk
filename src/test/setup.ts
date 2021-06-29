@@ -10,6 +10,40 @@ export const mockCreateCryptoAddressResponse:Record<string, string> = {
   coin: 'celo',
   qrCode: 'mock_qr_code'
 }
+
+export const mockBtcLabel: string = "btc sdk label";
+export const mockBtcResponse:Record<string, string> = {
+  address: '2MuPEe39TcfbkYqhocJcmdY6NDBu3bMKXuk',
+  coin: 'btc',
+  qrCode: 'mock_qr_code'
+}
+export const mockCeloLabel: string = "celo sdk label";
+export const mockCeloResponse:Record<string, string> = {
+  address: '0xbea9eba14325eab4df44a653412c3a9b379d9e55',
+  coin: 'celo',
+  qrCode: 'mock_qr_code'
+}
+export const mockXrpLabel: string = "ripple sdk label";
+export const mockXrpResponse:Record<string, string> = {
+  address: 'r3URbuMMeijNXc87b57QP3y53xti1yPZWj',
+  coin: 'xrp',
+  qrCode: 'mock_qr_code'
+}
+export const mockXlmLabel: string = "stellar sdk label";
+export const mockXlmResponse:Record<string, string> = {
+  address: 'GB2LBDLS35MVPGUNQLR5XLXZOETGBTPURVW6IE7NLCMPRDTOCKQLPEQT',
+  coin: 'xlm',
+  qrCode: 'mock_qr_code'
+}
+export const mockEthLabel: string = "ethereum sdk label";
+export const mockEthResponse:Record<string, string> = {
+  address: '0xf793c3bdc75e82ee3f56f531eea3acb852acc448',
+  coin: 'eth',
+  qrCode: 'mock_qr_code'
+}
+
+
+
 export const mockListCryptoWalletResponse: Record<string, any> = {
   stats: { page: 1, size: 2, pages: 1 },
   data: [

@@ -1,5 +1,5 @@
 import {Enterprise} from "../../index";
-import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mockBankResolveResponse, mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker, mockTickers } from "../setup";
+import { mockaddWebhookParam, mockAddWebhookResponse, mockBankResolveParam, mockBankResolveResponse, mockBtcLabel, mockBtcResponse, mockCeloLabel, mockCeloResponse, mockCoin, mockCreateCryptoAddressResponse, mockCreateCryptoWalletRequest, mockEthLabel, mockEthResponse, mockGetWebhookResponse, mockListBankResponse, mockListCryptoWalletResponse, mockPagination, mockRateResponse, mockTestBaseUrl, mockTestToken, mockTicker, mockTickers, mockXlmLabel, mockXlmResponse, mockXrpLabel, mockXrpResponse } from "../setup";
 
 describe("Test case for sdk", () => {
   let bitmama: any;
@@ -27,6 +27,68 @@ describe("Test case for sdk", () => {
     expect(res).toMatchObject(mockCreateCryptoAddressResponse);
     expect(spy).toHaveBeenCalledTimes(1);
   })
+
+  test("test *createCeloWallet* func", async () => {
+    const spy = jest
+    .spyOn(bitmama, "createCeloWallet")
+    .mockResolvedValueOnce(mockCeloResponse);
+    const res = await bitmama.createCeloWallet(mockCeloLabel);
+    expect(res?.qrCode).toBe(mockCeloResponse.qrCode);
+    expect(res?.coin).toBe(mockCeloResponse.coin);
+    expect(res?.coin).toBe("celo");
+    expect(res?.address).toBe(mockCeloResponse.address);
+    expect(res).toMatchObject(mockCeloResponse);
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+  test("test *createBtcWallet* func", async () => {
+    const spy = jest
+    .spyOn(bitmama, "createBtcWallet")
+    .mockResolvedValueOnce(mockBtcResponse);
+    const res = await bitmama.createBtcWallet(mockBtcLabel);
+    expect(res?.qrCode).toBe(mockBtcResponse.qrCode);
+    expect(res?.coin).toBe(mockBtcResponse.coin);
+    expect(res?.coin).toBe("btc");
+    expect(res?.address).toBe(mockBtcResponse.address);
+    expect(res).toMatchObject(mockBtcResponse);
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+  test("test *createEthWallet* func", async () => {
+    const spy = jest
+    .spyOn(bitmama, "createEthWallet")
+    .mockResolvedValueOnce(mockEthResponse);
+    const res = await bitmama.createEthWallet(mockEthLabel);
+    expect(res?.qrCode).toBe(mockEthResponse.qrCode);
+    expect(res?.coin).toBe(mockEthResponse.coin);
+    expect(res?.coin).toBe("eth");
+    expect(res?.address).toBe(mockEthResponse.address);
+    expect(res).toMatchObject(mockEthResponse);
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+  test("test *createRippleWallet* func", async () => {
+    const spy = jest
+    .spyOn(bitmama, "createRippleWallet")
+    .mockResolvedValueOnce(mockXrpResponse);
+    const res = await bitmama.createRippleWallet(mockXrpLabel);
+    expect(res?.qrCode).toBe(mockXrpResponse.qrCode);
+    expect(res?.coin).toBe(mockXrpResponse.coin);
+    expect(res?.coin).toBe("xrp");
+    expect(res?.address).toBe(mockXrpResponse.address);
+    expect(res).toMatchObject(mockXrpResponse);
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+  test("test *createStellarWallet* func", async () => {
+    const spy = jest
+    .spyOn(bitmama, "createStellarWallet")
+    .mockResolvedValueOnce(mockXlmResponse);
+    const res = await bitmama.createStellarWallet(mockXlmLabel);
+    expect(res?.qrCode).toBe(mockXlmResponse.qrCode);
+    expect(res?.coin).toBe(mockXlmResponse.coin);
+    expect(res?.coin).toBe("xlm");
+    expect(res?.address).toBe(mockXlmResponse.address);
+    expect(res).toMatchObject(mockXlmResponse);
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+  
   test("test *listCryptoWallet* func", async () => {
     const spy = jest
       .spyOn(bitmama, "listCryptoWallet")
